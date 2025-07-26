@@ -1,0 +1,10 @@
+{
+  "routing": {
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
+}

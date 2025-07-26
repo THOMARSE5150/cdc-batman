@@ -1,0 +1,99 @@
+You reached the start of the range → Jul 9, 2025 at 11:11 PM
+
+
+> rest-express@1.0.0 build
+> vite build --outDir dist/public
+
+
+vite v5.4.14 building for production...
+
+transforming...
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+✓ 74 modules transformed.
+
+x Build failed in 2.14s
+
+error during build:
+Could not resolve "../../assets/images/header_logo.png" from "client/src/components/ui/Logo.tsx"
+file: /app/client/src/components/ui/Logo.tsx
+    at getRollupError (file:///app/node_modules/rollup/dist/es/shared/parseAst.js:396:41)
+    at error (file:///app/node_modules/rollup/dist/es/shared/parseAst.js:392:42)
+    at ModuleLoader.handleInvalidResolvedId (file:///app/node_modules/rollup/dist/es/shared/node-entry.js:20065:24)
+    at file:///app/node_modules/rollup/dist/es/shared/node-entry.js:20025:26
+
+No dist directories found
+Looking for index.html files:
+
+./client/index.html
+
+./node_modules/url-template/test/index.html
+
+Checking client directory:
+
+total 32
+
+drwxrwxr-x    5 root     root          4096 Jul  9 13:11 .
+drwxr-xr-x    1 root     root          4096 Jul  9 13:12 ..
+drwxrwxr-x    3 root     root          4096 Jul  9 13:11 assets
+-rw-rw-r--    1 root     root           166 Jul  9 13:11 env.d.ts
+-rw-rw-r--    1 root     root          5923 Jul  9 13:11 index.html
+drwxrwxr-x    3 root     root          4096 Jul  9 13:11 public
+drwxrwxr-x    8 root     root          4096 Jul  9 13:11 src
+
+Final verification...
+
+❌ Build location issue - searching all paths
+
+./client/index.html
+
+./node_modules/url-template/test/index.html
+
+./node_modules/react-style-singleton/dist
+
+./node_modules/postcss-selector-parser/dist
+./node_modules/deepmerge/dist
+./node_modules/resolve-pkg-maps/dist
+./node_modules/get-user-locale/dist
+./node_modules/use-sidecar/dist
+./node_modules/d3-format/dist
+./node_modules/@esbuild-kit/esm-loader/dist
+./node_modules/@esbuild-kit/core-utils/dist
+./node_modules/clsx/dist
+
+[stage-0 7/7] RUN echo "=== DOCKER BUILD DEBUG ===" &&     echo "Working directory: $(pwd)" &&     echo "Directory contents before build:" &&     ls -la &&     echo "Starting build process..." &&     npm run build &&     echo "Build completed, checking all possible locations..." &&     echo "Root directory after build:" &&     ls -la &&     echo "Looking for dist directories:" &&     find . -name "dist" -type d 2>/dev/null || echo "No dist directories found" &&     echo "Looking for index.html files:" &&     find . -name "index.html" 2>/dev/null || echo "No index.html files found" &&     echo "Checking client directory:" &&     ls -la client/ 2>/dev/null || echo "No client directory" &&     echo "Final verification..." &&     if [ -d "dist/public" ] && [ -f "dist/public/index.html" ]; then         echo "✅ Build successful - found dist/public/index.html";         ls -la dist/public/ | head -10;     elif [ -d "client/dist/public" ] && [ -f "client/dist/public/index.html" ]; then         echo "🔧 Found client/dist build - copying to expected location";         cp -r client/dist/* . && echo "✅ Copied client/dist to root";         ls -la dist/public/ | head -10;     else         echo "❌ Build location issue - searching all paths";         find . -name "index.html" -type f | head -10;         find . -name "dist" -type d | head -10;     fi  ✔ 3 sec.
+
+[stage-1  2/14] RUN apk add --no-cache dumb-init  ✔ 0 ms – CACHED
+
+[stage-1  3/14] WORKDIR /app  ✔ 0 ms – CACHED
+
+[stage-1  4/14] COPY package*.json ./  ✔ 0 ms – CACHED
+
+[stage-1  5/14] RUN npm ci --only=production && npm cache clean --force  ✔ 0 ms – CACHED
+
+✕ [stage-1  6/14] COPY --from=0 /app/client/dist/public ./dist/public 
+failed to calculate checksum of ref r4rvzq4fhj43v1g4i12b78iki::txi2hmpzaf9fgze5fm0c04hjv: "/app/client/dist/public": not found
+ 
+
+Dockerfile:63
+
+-------------------
+
+61 |
+
+62 |     # Copy built application from previous stage (build outputs to client/dist/public)
+
+63 | >>> COPY --from=0 /app/client/dist/public ./dist/public
+
+64 |     # Copy logo files from public folder to ensure they're available in production
+
+65 |     COPY --from=0 /app/public/images ./dist/public/images
+
+-------------------
+
+ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref r4rvzq4fhj43v1g4i12b78iki::txi2hmpzaf9fgze5fm0c04hjv: "/app/client/dist/public": not found
+You reached the present time
+

@@ -1,0 +1,100 @@
+You reached the start of the range → Jul 10, 2025 at 1:37 AM
+
+[ 6/11] COPY . .
+
+[ 6/11] COPY . .  ✔ 321 ms
+
+[ 7/11] RUN echo "🔧 Setting file permissions..." &&     chmod -R 644 public/images/* &&     chmod +x static-build.js &&     echo "🚀 Building static deployment..." &&     node static-build.js &&     echo "✅ Static build completed"
+
+🔧 Setting file permissions...
+
+🚀 Building static deployment...
+
+🚀 Creating static deployment for Railway...
+
+🧹 Preparing directories...
+
+📸 Copying static assets...
+
+✅ Copied: aboriginal_flag.svg
+
+✅ Successfully copied 1/1 images
+
+✅ Copied 7 public files
+🏗️ Creating static index.html...
+
+🔧 Creating Railway-ready static site...
+
+✅ Static deployment created successfully!
+
+📁 Files created:
+
+  - dist/public/index.html (main site)
+
+  - dist/public/images/ (logo and assets)
+
+🚀 Ready for Railway deployment!
+
+✅ Static build completed
+
+[ 7/11] RUN echo "🔧 Setting file permissions..." &&     chmod -R 644 public/images/* &&     chmod +x static-build.js &&     echo "🚀 Building static deployment..." &&     node static-build.js &&     echo "✅ Static build completed"  ✔ 136 ms
+
+[ 8/11] RUN echo "🔍 Verifying build..." &&     ls -la dist/public/ &&     test -f "dist/public/index.html" &&     echo "✅ index.html verified" &&     ls -la dist/public/images/ &&     test -f "dist/public/images/header_logo.png" &&     echo "✅ header_logo.png verified" &&     echo "🚀 All verifications passed - ready for Railway!"
+
+🔍 Verifying build...
+
+total 100
+
+drwxr-xr-x    4 root     root          4096 Jul  9 15:37 .
+drwxr-xr-x    3 root     root          4096 Jul  9 15:37 ..
+drwxr-xr-x    2 root     root          4096 Jul  9 15:37 assets
+-rw-rw-r--    1 root     root         51525 Jul  9 15:37 favicon.ico
+-rw-rw-r--    1 root     root           529 Jul  9 15:37 favicon.svg
+-rw-rw-r--    1 root     root            53 Jul  9 15:37 googlee964abc67dc1d83e.html
+drwxr-xr-x    2 root     root          4096 Jul  9 15:37 images
+-rw-r--r--    1 root     root          4225 Jul  9 15:37 index.html
+-rw-rw-r--    1 root     root           293 Jul  9 15:37 robots.txt
+-rw-rw-r--    1 root     root           388 Jul  9 15:37 site.webmanifest
+-rw-rw-r--    1 root     root           524 Jul  9 15:37 sitemap.xml
+-rw-rw-r--    1 root     root          1882 Jul  9 15:37 sw.js
+
+✅ index.html verified
+
+total 12
+drwxr-xr-x    2 root     root          4096 Jul  9 15:37 .
+drwxr-xr-x    4 root     root          4096 Jul  9 15:37 ..
+-rw-r--r--    1 root     root           257 Jul  9 15:37 aboriginal_flag.svg
+
+✕ [ 8/11] RUN echo "🔍 Verifying build..." &&     ls -la dist/public/ &&     test -f "dist/public/index.html" &&     echo "✅ index.html verified" &&     ls -la dist/public/images/ &&     test -f "dist/public/images/header_logo.png" &&     echo "✅ header_logo.png verified" &&     echo "🚀 All verifications passed - ready for Railway!" 
+process "/bin/sh -c echo \"🔍 Verifying build...\" &&     ls -la dist/public/ &&     test -f \"dist/public/index.html\" &&     echo \"✅ index.html verified\" &&     ls -la dist/public/images/ &&     test -f \"dist/public/images/header_logo.png\" &&     echo \"✅ header_logo.png verified\" &&     echo \"🚀 All verifications passed - ready for Railway!\"" did not complete successfully: exit code: 1
+ 
+
+Dockerfile:29
+
+-------------------
+
+28 |     # Verify the build succeeded
+
+29 | >>> RUN echo "🔍 Verifying build..." && \
+
+30 | >>>     ls -la dist/public/ && \
+
+31 | >>>     test -f "dist/public/index.html" && \
+
+32 | >>>     echo "✅ index.html verified" && \
+
+33 | >>>     ls -la dist/public/images/ && \
+
+34 | >>>     test -f "dist/public/images/header_logo.png" && \
+
+35 | >>>     echo "✅ header_logo.png verified" && \
+
+36 | >>>     echo "🚀 All verifications passed - ready for Railway!"
+
+37 |
+
+-------------------
+
+ERROR: failed to build: failed to solve: process "/bin/sh -c echo \"🔍 Verifying build...\" &&     ls -la dist/public/ &&     test -f \"dist/public/index.html\" &&     echo \"✅ index.html verified\" &&     ls -la dist/public/images/ &&     test -f \"dist/public/images/header_logo.png\" &&     echo \"✅ header_logo.png verified\" &&     echo \"🚀 All verifications passed - ready for Railway!\"" did not complete successfully: exit code: 1
+
+Load More

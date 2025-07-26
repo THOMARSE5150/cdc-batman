@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Performance Test</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .status { font-weight: bold; }
+        .success { color: green; }
+        .pending { color: orange; }
+        .error { color: red; }
+        .metrics {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Performance Test</h1>
+    
+    <div class="test-section">
+        <h2>🔧 Optimization Status</h2>
+        <div id="optimization-status">Loading...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📊 Core Web Vitals</h2>
+        <div id="web-vitals">Measuring...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🌐 Network Resources</h2>
+        <div id="network-info">Analyzing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>💾 Cache Status</h2>
+        <div id="cache-info">Checking...</div>
+    </div>
+
+    <script>
+        // Force mobile viewport for testing
+        Object.defineProperty(window, 'innerWidth', {
+            writable: true,
+            configurable: true,
+            value: 375
+        });
+
+        // Test optimization components
+        function testOptimizations() {
+            const optimizations = [
+                'data-critical-loaded',
+                'data-images-optimized', 
+                'data-js-optimized',
+                'data-css-optimized',
+                'data-mobile-enhanced'
+            ];
+            
+            const results = optimizations.map(attr => {
+                const exists = document.documentElement.hasAttribute(attr);
+                return `${attr}: ${exists ? '✅ Active' : '❌ Not Found'}`;
+            });
+            
+            document.getElementById('optimization-status').innerHTML = results.join('<br>');
+        }
+
+        // Measure Core Web Vitals
+        function measureWebVitals() {
+            const vitals = {};
+            
+            // Measure FCP
+            if ('PerformanceObserver' in window) {
+                try {
+                    const fcpObserver = new PerformanceObserver((entryList) => {
+                        for (const entry of entryList.getEntries()) {
+                            if (entry.name === 'first-contentful-paint') {
+                                vitals.fcp = Math.round(entry.startTime);
+                                updateVitalsDisplay();
+                            }
+                        }
+                    });
+                    fcpObserver.observe({ entryTypes: ['paint'] });
+                } catch (e) {
+                    console.log('FCP measurement not supported');
+                }
+
+                // Measure LCP
+                try {
+                    const lcpObserver = new PerformanceObserver((entryList) => {
+                        const entries = entryList.getEntries();
+                        const lastEntry = entries[entries.length - 1];
+                        vitals.lcp = Math.round(lastEntry.startTime);
+                        updateVitalsDisplay();
+                    });
+                    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+                } catch (e) {
+                    console.log('LCP measurement not supported');
+                }
+            }
+            
+            function updateVitalsDisplay() {
+                const display = [];
+                if (vitals.fcp) {
+                    const fcpStatus = vitals.fcp < 1800 ? 'success' : 'error';
+                    display.push(`<span class="${fcpStatus}">FCP: ${vitals.fcp}ms (target: <1800ms)</span>`);
+                }
+                if (vitals.lcp) {
+                    const lcpStatus = vitals.lcp < 2500 ? 'success' : 'error';
+                    display.push(`<span class="${lcpStatus}">LCP: ${vitals.lcp}ms (target: <2500ms)</span>`);
+                }
+                document.getElementById('web-vitals').innerHTML = display.join('<br>') || 'Measuring...';
+            }
+        }
+
+        // Check network resources
+        function checkNetworkResources() {
+            if ('performance' in window && 'getEntriesByType' in performance) {
+                const resources = performance.getEntriesByType('resource');
+                const images = resources.filter(r => r.initiatorType === 'img');
+                const scripts = resources.filter(r => r.initiatorType === 'script');
+                const stylesheets = resources.filter(r => r.initiatorType === 'link');
+                
+                const totalSize = resources.reduce((acc, r) => acc + (r.transferSize || 0), 0);
+                const totalSizeKB = Math.round(totalSize / 1024);
+                
+                const networkInfo = [
+                    `Total Resources: ${resources.length}`,
+                    `Images: ${images.length}`,
+                    `Scripts: ${scripts.length}`,
+                    `Stylesheets: ${stylesheets.length}`,
+                    `Total Transfer Size: ${totalSizeKB} KB`
+                ];
+                
+                document.getElementById('network-info').innerHTML = networkInfo.join('<br>');
+            } else {
+                document.getElementById('network-info').innerHTML = 'Performance API not available';
+            }
+        }
+
+        // Check cache status
+        function checkCacheStatus() {
+            if ('caches' in window) {
+                caches.keys().then(cacheNames => {
+                    if (cacheNames.length > 0) {
+                        document.getElementById('cache-info').innerHTML = 
+                            `<span class="success">✅ Service Worker Cache Active</span><br>` +
+                            `Cache Names: ${cacheNames.join(', ')}`;
+                    } else {
+                        document.getElementById('cache-info').innerHTML = 
+                            '<span class="pending">⏳ No Service Worker Cache Found</span>';
+                    }
+                });
+            } else {
+                document.getElementById('cache-info').innerHTML = 
+                    '<span class="error">❌ Cache API not supported</span>';
+            }
+        }
+
+        // Load the main site content into an iframe for testing
+        function loadMainSite() {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'http://localhost:5000';
+            iframe.style.width = '375px';
+            iframe.style.height = '500px';
+            iframe.style.border = '1px solid #ddd';
+            iframe.style.marginTop = '20px';
+            
+            iframe.onload = () => {
+                console.log('Main site loaded in iframe');
+                // Wait a bit for optimizations to apply
+                setTimeout(() => {
+                    testOptimizations();
+                    measureWebVitals();
+                    checkNetworkResources();
+                    checkCacheStatus();
+                }, 2000);
+            };
+            
+            document.body.appendChild(iframe);
+        }
+
+        // Initialize tests
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🧪 Starting mobile performance test...');
+            
+            // Initial tests
+            setTimeout(() => {
+                testOptimizations();
+                measureWebVitals();
+                checkNetworkResources();
+                checkCacheStatus();
+            }, 1000);
+            
+            // Load main site for comprehensive testing
+            loadMainSite();
+        });
+    </script>
+</body>
+</html>

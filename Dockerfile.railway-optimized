@@ -1,0 +1,63 @@
+# Railway Production Dockerfile - Optimized
+# Following Railway best practices for Node.js deployment
+FROM node:18-alpine AS base
+
+# Install system dependencies
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    git \
+    tini \
+    dumb-init \
+    && rm -rf /var/cache/apk/*
+
+# Set working directory
+WORKDIR /app
+
+# Create non-root user early
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S server -u 1001 -G nodejs
+
+# Copy package files for dependency installation
+COPY --chown=server:nodejs package*.json ./
+
+# Install dependencies (including dev for build)
+RUN npm ci --include=dev --no-audit --no-fund
+
+# Copy source code with proper ownership
+COPY --chown=server:nodejs . .
+
+# Build the application
+RUN echo "🚀 Building application for Railway..." && \
+    NODE_ENV=production npm run build && \
+    echo "📁 Ensuring assets are properly copied..." && \
+    mkdir -p dist/public/images && \
+    cp -r public/images/* dist/public/images/ 2>/dev/null || echo "No images to copy" && \
+    echo "✅ Build completed successfully"
+
+# Verify critical files exist
+RUN echo "🔍 Verifying build output..." && \
+    test -f "dist/public/index.html" && echo "✅ index.html found" && \
+    ls -la dist/public/ && \
+    echo "📦 Build verification completed"
+
+# Remove dev dependencies to reduce image size
+RUN npm ci --only=production --no-audit --no-fund && \
+    npm cache clean --force
+
+# Switch to non-root user
+USER server
+
+# Health check for Railway
+HEALTHCHECK --interval=30s --timeout=10s --start-period=45s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT:-3000}/health || exit 1
+
+# Expose the port (Railway will set PORT env var)
+EXPOSE $PORT
+
+# Use dumb-init for proper signal handling in containers
+ENTRYPOINT ["dumb-init", "--"]
+
+# Start the application
+CMD ["node", "server.js"]

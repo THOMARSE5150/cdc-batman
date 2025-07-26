@@ -1,0 +1,95 @@
+You reached the start of the range → Jul 9, 2025 at 10:23 PM
+
+context: 67dr-yJhN
+
+╔═════════════════════ Nixpacks v1.38.0 ═════════════════════╗
+
+║ setup      │ pkgs: nodejs_18, npm-9_x, openssl             ║
+
+║            │ cmds: npm ci                                  ║
+
+║────────────────────────────────────────────────────────────║
+
+║ caddy      │ pkgs: caddy                                   ║
+
+║            │ cmds: caddy fmt --overwrite /assets/Caddyfile ║
+
+║────────────────────────────────────────────────────────────║
+
+║ install    │ npm ci                                        ║
+
+║────────────────────────────────────────────────────────────║
+
+║ build      │ npm run build && node post-build.js           ║
+
+║────────────────────────────────────────────────────────────║
+
+║ start      │ node start-railway.js                         ║
+
+╚════════════════════════════════════════════════════════════╝
+
+[internal] load build definition from Dockerfile
+
+[internal] load build definition from Dockerfile  ✔ 0 ms
+
+[internal] load build definition from Dockerfile
+
+[internal] load build definition from Dockerfile  ✔ 11 ms
+
+[internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
+
+[internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067  ✔ 283 ms
+
+[internal] load .dockerignore
+
+[internal] load .dockerignore  ✔ 0 ms
+
+[internal] load .dockerignore
+
+[internal] load .dockerignore  ✔ 9 ms
+
+[internal] load build context  ✔ 0 ms
+
+[internal] load build context
+
+[internal] load build context  ✔ 50 ms
+
+[stage-0  2/10] WORKDIR /app/  ✔ 0 ms – CACHED
+
+✕ [stage-0  3/17] COPY .nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix .nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix 
+failed to calculate checksum of ref 7zi47w92z7lhc6m474n9xyg1c::ubqqhggtr7sjxyhkpdlknkz7s: "/.nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix": not found
+ 
+
+[stage-0  4/17] RUN nix-env -if .nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix && nix-collect-garbage -d  ✔ 0 ms – CACHED
+
+✕ [stage-0  5/17] COPY .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix 
+failed to calculate checksum of ref 7zi47w92z7lhc6m474n9xyg1c::ubqqhggtr7sjxyhkpdlknkz7s: "/.nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix": not found
+ 
+
+[stage-0  6/17] RUN nix-env -if .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix && nix-collect-garbage -d  ✔ 0 ms – CACHED
+
+✕ [stage-0  7/17] COPY .nixpacks/assets /assets/ 
+failed to calculate checksum of ref 7zi47w92z7lhc6m474n9xyg1c::ubqqhggtr7sjxyhkpdlknkz7s: "/.nixpacks/assets": not found
+ 
+
+Dockerfile:12
+
+-------------------
+
+10 |     RUN nix-env -if .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix && nix-collect-garbage -d
+
+11 |
+
+12 | >>> COPY .nixpacks/assets /assets/
+
+13 |     ARG BUILDKIT_DOCKERFILE_CHECK CI NIXPACKS_METADATA NIXPACKS_SPA_OUTPUT_DIR NODE_ENV NPM_CONFIG_PRODUCTION RAILWAY_ENVIRONMENT RAILWAY_ENVIRONMENT_ID RAILWAY_ENVIRONMENT_NAME RAILWAY_GIT_AUTHOR RAILWAY_GIT_BRANCH RAILWAY_GIT_COMMIT_MESSAGE RAILWAY_GIT_COMMIT_SHA RAILWAY_GIT_REPO_NAME RAILWAY_GIT_REPO_OWNER RAILWAY_PRIVATE_DOMAIN RAILWAY_PROJECT_ID RAILWAY_PROJECT_NAME RAILWAY_PUBLIC_DOMAIN RAILWAY_SERVICE_CDC_REPLIT_URL RAILWAY_SERVICE_ID RAILWAY_SERVICE_NAME RAILWAY_STATIC_URL
+
+14 |     ENV BUILDKIT_DOCKERFILE_CHECK=$BUILDKIT_DOCKERFILE_CHECK CI=$CI NIXPACKS_METADATA=$NIXPACKS_METADATA NIXPACKS_SPA_OUTPUT_DIR=$NIXPACKS_SPA_OUTPUT_DIR NODE_ENV=$NODE_ENV NPM_CONFIG_PRODUCTION=$NPM_CONFIG_PRODUCTION RAILWAY_ENVIRONMENT=$RAILWAY_ENVIRONMENT RAILWAY_ENVIRONMENT_ID=$RAILWAY_ENVIRONMENT_ID RAILWAY_ENVIRONMENT_NAME=$RAILWAY_ENVIRONMENT_NAME RAILWAY_GIT_AUTHOR=$RAILWAY_GIT_AUTHOR RAILWAY_GIT_BRANCH=$RAILWAY_GIT_BRANCH RAILWAY_GIT_COMMIT_MESSAGE=$RAILWAY_GIT_COMMIT_MESSAGE RAILWAY_GIT_COMMIT_SHA=$RAILWAY_GIT_COMMIT_SHA RAILWAY_GIT_REPO_NAME=$RAILWAY_GIT_REPO_NAME RAILWAY_GIT_REPO_OWNER=$RAILWAY_GIT_REPO_OWNER RAILWAY_PRIVATE_DOMAIN=$RAILWAY_PRIVATE_DOMAIN RAILWAY_PROJECT_ID=$RAILWAY_PROJECT_ID RAILWAY_PROJECT_NAME=$RAILWAY_PROJECT_NAME RAILWAY_PUBLIC_DOMAIN=$RAILWAY_PUBLIC_DOMAIN RAILWAY_SERVICE_CDC_REPLIT_URL=$RAILWAY_SERVICE_CDC_REPLIT_URL RAILWAY_SERVICE_ID=$RAILWAY_SERVICE_ID RAILWAY_SERVICE_NAME=$RAILWAY_SERVICE_NAME RAILWAY_STATIC_URL=$RAILWAY_STATIC_URL
+
+-------------------
+
+ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref 7zi47w92z7lhc6m474n9xyg1c::ubqqhggtr7sjxyhkpdlknkz7s: "/.nixpacks/assets": not found
+
+Error: Docker build failed
+
+Load More

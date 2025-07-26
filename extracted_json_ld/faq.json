@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is counselling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Counselling is a process where a trained professional helps you explore emotional difficulties and improve mental well-being."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is counselling confidential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all counselling sessions are confidential except in circumstances where there is a risk of harm."
+      }
+    }
+  ]
+}

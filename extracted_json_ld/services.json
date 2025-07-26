@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Mental Health Counselling",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Celia Dunsmore Counselling"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brunswick",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      }
+    },
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Coburg",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      }
+    }
+  ],
+  "url": "https://celiadunsmorecounselling.com.au/services",
+  "description": "Compassionate mental health counselling services provided by an Accredited Mental Health Social Worker. Supporting emotional wellbeing, trauma recovery, and personal growth."
+}

@@ -1,0 +1,17 @@
+<svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top arc -->
+  <path d="M 80 120 Q 200 40 320 120" fill="none" stroke="#4EB3A5" stroke-width="3"/>
+  
+  <!-- Bottom arc -->
+  <path d="M 80 200 Q 200 280 320 200" fill="none" stroke="#4EB3A5" stroke-width="3"/>
+  
+  <!-- Text: CELIA DUNSMORE -->
+  <text x="200" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="3" fill="#4EB3A5">
+    CELIA DUNSMORE
+  </text>
+  
+  <!-- Text: COUNSELLING -->
+  <text x="200" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="2" fill="#4EB3A5">
+    COUNSELLING
+  </text>
+</svg>

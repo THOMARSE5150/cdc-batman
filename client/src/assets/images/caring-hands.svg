@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="600" height="400" rx="20" fill="url(#paint0_linear)" />
+  
+  <!-- First Hand - Left side -->
+  <path d="M185 195C180 200 175 210 175 220C175 230 178 240 185 245C195 252 210 255 225 255C240 255 255 250 265 240" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M225 255C235 260 245 265 255 265C265 265 275 260 280 250C285 240 285 230 280 220" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M280 220C285 210 285 200 280 190C275 180 265 175 255 175" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M255 175C245 175 235 180 230 190C225 200 225 210 230 220" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M230 220C235 230 240 235 250 235C260 235 270 230 275 220" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <!-- Thumb of left hand -->
+  <path d="M185 245C175 240 170 230 170 220C170 210 175 200 185 195" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <!-- Wrist of left hand -->
+  <path d="M170 220C160 215 155 210 150 200" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  
+  <!-- Second Hand - Right side -->
+  <path d="M415 195C420 200 425 210 425 220C425 230 422 240 415 245C405 252 390 255 375 255C360 255 345 250 335 240" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M375 255C365 260 355 265 345 265C335 265 325 260 320 250C315 240 315 230 320 220" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M320 220C315 210 315 200 320 190C325 180 335 175 345 175" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M345 175C355 175 365 180 370 190C375 200 375 210 370 220" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <path d="M370 220C365 230 360 235 350 235C340 235 330 230 325 220" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <!-- Thumb of right hand -->
+  <path d="M415 245C425 240 430 230 430 220C430 210 425 200 415 195" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  <!-- Wrist of right hand -->
+  <path d="M430 220C440 215 445 210 450 200" stroke="#5B9D8A" stroke-width="3" fill="#7BBEAD" fill-opacity="0.7" />
+  
+  <!-- Plant/leaf element in the center between hands -->
+  <path d="M300 300C300 300 300 250 300 230" stroke="#5B9D8A" stroke-width="3" stroke-linecap="round" />
+  <path d="M300 230C300 230 280 210 290 190C300 170 320 170 330 190C340 210 320 230 300 230Z" stroke="#5B9D8A" stroke-width="2" fill="#8ED1BD" fill-opacity="0.5" />
+  <path d="M300 230C300 230 320 210 310 190C300 170 280 170 270 190C260 210 280 230 300 230Z" stroke="#5B9D8A" stroke-width="2" fill="#8ED1BD" fill-opacity="0.5" />
+  <path d="M300 230C300 230 290 200 300 180C310 160 330 170 335 190C340 210 320 220 300 230Z" stroke="#5B9D8A" stroke-width="2" fill="#8ED1BD" fill-opacity="0.5" />
+  
+  <!-- Central area/element between hands -->
+  <circle cx="300" cy="220" r="35" fill="#F3C98B" fill-opacity="0.2" />
+  <circle cx="300" cy="220" r="25" fill="#F3C98B" fill-opacity="0.3" />
+  
+  <!-- Energy/connection between hands -->
+  <path d="M265 240C275 235 285 230 295 225C305 230 315 235 325 240" stroke="#F3C98B" stroke-width="1.5" stroke-opacity="0.7" />
+  <path d="M265 230C275 225 285 220 295 215C305 220 315 225 325 230" stroke="#F3C98B" stroke-width="1.5" stroke-opacity="0.7" />
+  <path d="M265 220C275 215 285 210 295 205C305 210 315 215 325 220" stroke="#F3C98B" stroke-width="1.5" stroke-opacity="0.7" />
+  
+  <!-- Small floating elements representing healing/growth -->
+  <circle cx="250" cy="180" r="4" fill="#8ED1BD" fill-opacity="0.4" />
+  <circle cx="260" cy="160" r="3" fill="#8ED1BD" fill-opacity="0.4" />
+  <circle cx="270" cy="190" r="5" fill="#8ED1BD" fill-opacity="0.4" />
+  
+  <circle cx="350" cy="180" r="4" fill="#8ED1BD" fill-opacity="0.4" />
+  <circle cx="340" cy="160" r="3" fill="#8ED1BD" fill-opacity="0.4" />
+  <circle cx="330" cy="190" r="5" fill="#8ED1BD" fill-opacity="0.4" />
+  
+  <!-- Subtle nature background elements -->
+  <path d="M100 100C120 90 140 95 160 85C180 75 200 85 220 75" stroke="#5B9D8A" stroke-opacity="0.15" stroke-width="2" />
+  <path d="M380 100C400 90 420 95 440 85C460 75 480 85 500 75" stroke="#5B9D8A" stroke-opacity="0.15" stroke-width="2" />
+  
+  <path d="M100 330C120 320 140 325 160 315C180 305 200 315 220 305" stroke="#5B9D8A" stroke-opacity="0.15" stroke-width="2" />
+  <path d="M380 330C400 320 420 325 440 315C460 305 480 315 500 305" stroke="#5B9D8A" stroke-opacity="0.15" stroke-width="2" />
+  
+  <!-- Gradients definitions -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6F7F4" />
+      <stop offset="1" stop-color="#FFFFFF" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="600" height="400" rx="20" fill="url(#paint0_linear)" />
+  
+  <!-- Stone path -->
+  <path d="M250 400C250 370 280 350 300 320C320 290 330 260 300 230C270 200 250 210 230 230" stroke="#A9BEC5" stroke-width="12" stroke-linecap="round" stroke-opacity="0.3" />
+  <path d="M250 400C250 370 280 350 300 320C320 290 330 260 300 230C270 200 250 210 230 230" stroke="#7BBEAD" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 5" />
+  
+  <!-- Garden pond -->
+  <ellipse cx="350" cy="330" rx="80" ry="30" fill="#7BBEAD" fill-opacity="0.3" />
+  <ellipse cx="350" cy="330" rx="70" ry="25" fill="#7BBEAD" fill-opacity="0.4" />
+  <ellipse cx="350" cy="330" rx="60" ry="20" fill="#7BBEAD" fill-opacity="0.5" />
+  
+  <!-- Ripples in pond -->
+  <ellipse cx="330" cy="320" rx="10" ry="5" stroke="#7BBEAD" stroke-opacity="0.6" stroke-width="1" />
+  <ellipse cx="370" cy="335" rx="15" ry="6" stroke="#7BBEAD" stroke-opacity="0.6" stroke-width="1" />
+  <ellipse cx="345" cy="340" rx="8" ry="3" stroke="#7BBEAD" stroke-opacity="0.6" stroke-width="1" />
+  
+  <!-- Meditation bench -->
+  <rect x="220" y="290" width="60" height="10" rx="2" fill="#A9BEC5" fill-opacity="0.7" />
+  <rect x="230" y="300" width="5" height="15" rx="1" fill="#A9BEC5" fill-opacity="0.7" />
+  <rect x="265" y="300" width="5" height="15" rx="1" fill="#A9BEC5" fill-opacity="0.7" />
+  
+  <!-- Japanese maple tree -->
+  <path d="M150 250C150 250 130 220 140 190C150 160 170 150 180 160C190 170 185 200 175 220" stroke="#5B9D8A" stroke-width="5" stroke-linecap="round" />
+  <path d="M150 190C150 190 140 170 130 165C120 160 110 165 115 175C120 185 130 190 140 190" stroke="#5B9D8A" stroke-width="3" stroke-linecap="round" />
+  <path d="M150 180C150 180 160 160 170 155C180 150 190 155 185 165C180 175 170 180 160 180" stroke="#5B9D8A" stroke-width="3" stroke-linecap="round" />
+  <path d="M150 210C150 210 170 200 180 205C190 210 190 220 180 225C170 230 160 220 155 215" stroke="#5B9D8A" stroke-width="3" stroke-linecap="round" />
+  <path d="M150 210C150 210 130 200 120 205C110 210 110 220 120 225C130 230 140 220 145 215" stroke="#5B9D8A" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Japanese maple leaves with autumn colors -->
+  <ellipse cx="130" cy="165" rx="15" ry="10" fill="#F3C98B" fill-opacity="0.6" />
+  <ellipse cx="170" cy="155" rx="15" ry="10" fill="#E57373" fill-opacity="0.4" />
+  <ellipse cx="180" cy="205" rx="15" ry="10" fill="#F3C98B" fill-opacity="0.6" />
+  <ellipse cx="120" cy="205" rx="15" ry="10" fill="#E57373" fill-opacity="0.4" />
+  <ellipse cx="150" cy="180" rx="25" ry="20" fill="#8ED1BD" fill-opacity="0.5" />
+  
+  <!-- Bamboo plants -->
+  <path d="M460 200L465 300" stroke="#5B9D8A" stroke-width="5" stroke-linecap="round" />
+  <path d="M480 190L485 310" stroke="#5B9D8A" stroke-width="5" stroke-linecap="round" />
+  <path d="M500 210L505 290" stroke="#5B9D8A" stroke-width="5" stroke-linecap="round" />
+  <path d="M520 200L525 320" stroke="#5B9D8A" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- Bamboo leaf clusters -->
+  <path d="M465 210C470 205 475 205 480 210C475 205 470 205 465 210Z" fill="#8ED1BD" />
+  <path d="M465 230C470 225 475 225 480 230C475 225 470 225 465 230Z" fill="#8ED1BD" />
+  <path d="M465 250C470 245 475 245 480 250C475 245 470 245 465 250Z" fill="#8ED1BD" />
+  <path d="M465 270C470 265 475 265 480 270C475 265 470 265 465 270Z" fill="#8ED1BD" />
+  
+  <path d="M485 220C490 215 495 215 500 220C495 215 490 215 485 220Z" fill="#8ED1BD" />
+  <path d="M485 240C490 235 495 235 500 240C495 235 490 235 485 240Z" fill="#8ED1BD" />
+  <path d="M485 260C490 255 495 255 500 260C495 255 490 255 485 260Z" fill="#8ED1BD" />
+  <path d="M485 280C490 275 495 275 500 280C495 275 490 275 485 280Z" fill="#8ED1BD" />
+  
+  <path d="M505 230C510 225 515 225 520 230C515 225 510 225 505 230Z" fill="#8ED1BD" />
+  <path d="M505 250C510 245 515 245 520 250C515 245 510 245 505 250Z" fill="#8ED1BD" />
+  <path d="M505 270C510 265 515 265 520 270C515 265 510 265 505 270Z" fill="#8ED1BD" />
+  
+  <!-- Ornamental rocks -->
+  <path d="M370 280C380 270 390 275 400 270C410 265 420 270 425 280C430 290 425 300 415 305C405 310 395 305 385 310C375 315 365 310 360 300C355 290 360 290 370 280Z" fill="#A9BEC5" fill-opacity="0.6" />
+  <path d="M320 350C325 345 335 347 340 345C345 343 350 345 353 350C356 355 354 360 349 363C344 366 339 364 334 366C329 368 324 366 321 361C318 356 315 355 320 350Z" fill="#A9BEC5" fill-opacity="0.6" />
+  
+  <!-- Lotus flowers on pond -->
+  <circle cx="330" cy="320" r="8" fill="#E57373" fill-opacity="0.3" />
+  <circle cx="330" cy="320" r="5" fill="#F3C98B" fill-opacity="0.6" />
+  <circle cx="370" cy="335" r="8" fill="#E57373" fill-opacity="0.3" />
+  <circle cx="370" cy="335" r="5" fill="#F3C98B" fill-opacity="0.6" />
+  
+  <!-- Birds -->
+  <path d="M220 100C225 95 230 97 235 95C230 97 225 100 220 100Z" fill="#5B9D8A" />
+  <path d="M240 80C245 75 250 77 255 75C250 77 245 80 240 80Z" fill="#5B9D8A" />
+  
+  <!-- Gradients definitions -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6F7F4" />
+      <stop offset="1" stop-color="#FFFFFF" />
+    </linearGradient>
+  </defs>
+</svg>

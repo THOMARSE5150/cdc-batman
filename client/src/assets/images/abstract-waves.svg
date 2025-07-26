@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with subtle gradient -->
+  <rect width="600" height="400" rx="20" fill="#E6F7F4" />
+  
+  <!-- Subtle texture overlay -->
+  <rect width="600" height="400" rx="20" fill="url(#noisePattern)" fill-opacity="0.02" />
+  
+  <!-- Main wave elements - flowing, abstract shapes representing calm and movement -->
+  <path d="M0 180C40 160 80 170 120 190C160 210 200 200 240 180C280 160 320 170 360 190C400 210 440 200 480 180C520 160 560 170 600 190V400H0V180Z" 
+        fill="#8ED1BD" fill-opacity="0.15" />
+  
+  <path d="M0 220C50 200 100 210 150 230C200 250 250 240 300 220C350 200 400 210 450 230C500 250 550 240 600 220V400H0V220Z" 
+        fill="#7BBEAD" fill-opacity="0.15" />
+  
+  <path d="M0 260C40 240 80 250 120 270C160 290 200 280 240 260C280 240 320 250 360 270C400 290 440 280 480 260C520 240 560 250 600 270V400H0V260Z" 
+        fill="#5B9D8A" fill-opacity="0.15" />
+  
+  <!-- Gentle flowing curves to add depth and movement -->
+  <path d="M0 240C60 220 120 230 180 250C240 270 300 260 360 240C420 220 480 230 540 250C600 270 600 240 600 240V400H0V240Z" 
+        fill="#A7C7E7" fill-opacity="0.05" />
+  
+  <path d="M0 300C50 280 100 290 150 310C200 330 250 320 300 300C350 280 400 290 450 310C500 330 550 320 600 300V400H0V300Z"
+        fill="#A7C7E7" fill-opacity="0.07" />
+  
+  <!-- Subtle horizontal lines -->
+  <line x1="0" y1="150" x2="600" y2="150" stroke="#5B9D8A" stroke-opacity="0.03" stroke-width="1" />
+  <line x1="0" y1="200" x2="600" y2="200" stroke="#5B9D8A" stroke-opacity="0.03" stroke-width="1" />
+  <line x1="0" y1="250" x2="600" y2="250" stroke="#5B9D8A" stroke-opacity="0.03" stroke-width="1" />
+  <line x1="0" y1="300" x2="600" y2="300" stroke="#5B9D8A" stroke-opacity="0.03" stroke-width="1" />
+  <line x1="0" y1="350" x2="600" y2="350" stroke="#5B9D8A" stroke-opacity="0.03" stroke-width="1" />
+  
+  <!-- Abstract circular elements - representing wholeness and healing -->
+  <circle cx="150" cy="120" r="40" fill="#F3C98B" fill-opacity="0.1" />
+  <circle cx="450" cy="100" r="35" fill="#F3C98B" fill-opacity="0.1" />
+  <circle cx="300" cy="70" r="45" fill="#F3C98B" fill-opacity="0.12" />
+  
+  <!-- Delicate connecting lines -->
+  <path d="M150 120C200 100 250 90 300 70C350 90 400 100 450 100" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="3 3" />
+  
+  <!-- Minimal abstract elements -->
+  <circle cx="220" cy="150" r="4" fill="#5B9D8A" fill-opacity="0.2" />
+  <circle cx="380" cy="130" r="3" fill="#5B9D8A" fill-opacity="0.2" />
+  <circle cx="300" cy="110" r="5" fill="#5B9D8A" fill-opacity="0.2" />
+  
+  <!-- Additional wave details -->
+  <path d="M0 320C40 310 80 315 120 325C160 335 200 330 240 320C280 310 320 315 360 325C400 335 440 330 480 320C520 310 560 315 600 325V400H0V320Z" 
+        fill="white" fill-opacity="0.2" />
+        
+  <path d="M0 340C50 335 100 340 150 345C200 350 250 345 300 340C350 335 400 340 450 345C500 350 550 345 600 340V400H0V340Z" 
+        fill="white" fill-opacity="0.25" />
+        
+  <path d="M0 360C40 358 80 360 120 362C160 364 200 362 240 360C280 358 320 360 360 362C400 364 440 362 480 360C520 358 560 360 600 362V400H0V360Z" 
+        fill="white" fill-opacity="0.3" />
+        
+  <!-- Gentle rising arcs -->
+  <path d="M50 200C100 180 150 170 200 190C250 210 300 200 350 180C400 160 450 170 500 190C550 210 600 200 650 180" 
+        stroke="#7BBEAD" stroke-opacity="0.15" stroke-width="1" />
+        
+  <path d="M-50 230C0 210 50 200 100 220C150 240 200 230 250 210C300 190 350 200 400 220C450 240 500 230 550 210" 
+        stroke="#7BBEAD" stroke-opacity="0.15" stroke-width="1" />
+  
+  <!-- Definition for subtle noise texture -->
+  <defs>
+    <pattern id="noisePattern" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#5B9D8A" fill-opacity="0.03" />
+      <rect x="10" y="10" width="80" height="80" fill="#E6F7F4" fill-opacity="0.03" />
+      <circle cx="50" cy="50" r="30" fill="#5B9D8A" fill-opacity="0.02" />
+    </pattern>
+  </defs>
+</svg>

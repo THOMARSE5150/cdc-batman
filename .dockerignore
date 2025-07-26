@@ -1,0 +1,15 @@
+node_modules
+.git
+.env
+.env.local
+*.log
+.replit
+README.md
+.gitignore
+.nixpacks
+build-static.sh
+deploy-static.sh
+quick-*
+temp-*
+attached_assets
+*.md

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradients with website's color scheme -->
+  <defs>
+    <linearGradient id="bgGradient" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F3F0FF" /> <!-- Light lavender -->
+      <stop offset="100%" stop-color="#E6F7F4" /> <!-- Light mint background -->
+    </linearGradient>
+    <linearGradient id="leafGradient1" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B2AA" stop-opacity="0.2" /> <!-- Primary teal -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.5" /> <!-- Primary teal darker -->
+    </linearGradient>
+    <linearGradient id="leafGradient2" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F87171" stop-opacity="0.2" /> <!-- Accent coral color -->
+      <stop offset="100%" stop-color="#F87171" stop-opacity="0.5" /> <!-- Accent coral darker -->
+    </linearGradient>
+    <linearGradient id="handLight" x1="250" y1="180" x2="250" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8E3DD" /> <!-- Light skin tone -->
+      <stop offset="100%" stop-color="#F5D0C5" /> <!-- Slightly darker skin tone -->
+    </linearGradient>
+    <linearGradient id="handDark" x1="350" y1="180" x2="350" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A6852" /> <!-- Dark skin tone -->
+      <stop offset="100%" stop-color="#6D5243" /> <!-- Slightly darker skin tone -->
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="1" dy="1" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <radialGradient id="glowGradient" cx="300" cy="200" r="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" rx="20" fill="url(#bgGradient)" />
+  
+  <!-- Abstract nature pattern background -->
+  <g opacity="0.1">
+    <circle cx="150" cy="100" r="50" fill="#20B2AA" />
+    <circle cx="450" cy="100" r="50" fill="#F87171" />
+    <circle cx="100" cy="300" r="80" fill="#20B2AA" />
+    <circle cx="500" cy="300" r="80" fill="#F87171" />
+    <circle cx="300" cy="50" r="100" fill="#F3F0FF" />
+    <circle cx="300" cy="350" r="100" fill="#E6F7F4" />
+  </g>
+  
+  <!-- Leaves on the top (minimal style) -->
+  <g transform="translate(50, 30) rotate(-10)">
+    <path d="M20 0 C40 0 40 20 30 30 C20 40 0 40 0 20 C0 0 20 0 20 0" fill="url(#leafGradient1)" opacity="0.8" />
+    <path d="M30 10 L15 25" stroke="#20B2AA" stroke-width="0.5" opacity="0.6" />
+    <path d="M15 10 L30 25" stroke="#20B2AA" stroke-width="0.5" opacity="0.6" />
+  </g>
+  <g transform="translate(100, 40) rotate(10)">
+    <path d="M20 0 C40 0 40 20 30 30 C20 40 0 40 0 20 C0 0 20 0 20 0" fill="url(#leafGradient1)" opacity="0.7" />
+    <path d="M30 10 L15 25" stroke="#20B2AA" stroke-width="0.5" opacity="0.6" />
+    <path d="M15 10 L30 25" stroke="#20B2AA" stroke-width="0.5" opacity="0.6" />
+  </g>
+  <g transform="translate(150, 20) rotate(-5)">
+    <path d="M20 0 C40 0 40 20 30 30 C20 40 0 40 0 20 C0 0 20 0 20 0" fill="url(#leafGradient1)" opacity="0.6" />
+    <path d="M30 10 L15 25" stroke="#20B2AA" stroke-width="0.5" opacity="0.6" />
+    <path d="M15 10 L30 25" stroke="#20B2AA" stroke-width="0.5" opacity="0.6" />
+  </g>
+  
+  <!-- Leaves on the top right (minimal style) -->
+  <g transform="translate(470, 30) rotate(10)">
+    <path d="M20 0 C40 0 40 20 30 30 C20 40 0 40 0 20 C0 0 20 0 20 0" fill="url(#leafGradient2)" opacity="0.8" />
+    <path d="M30 10 L15 25" stroke="#F87171" stroke-width="0.5" opacity="0.6" />
+    <path d="M15 10 L30 25" stroke="#F87171" stroke-width="0.5" opacity="0.6" />
+  </g>
+  <g transform="translate(420, 40) rotate(-10)">
+    <path d="M20 0 C40 0 40 20 30 30 C20 40 0 40 0 20 C0 0 20 0 20 0" fill="url(#leafGradient2)" opacity="0.7" />
+    <path d="M30 10 L15 25" stroke="#F87171" stroke-width="0.5" opacity="0.6" />
+    <path d="M15 10 L30 25" stroke="#F87171" stroke-width="0.5" opacity="0.6" />
+  </g>
+  <g transform="translate(370, 20) rotate(5)">
+    <path d="M20 0 C40 0 40 20 30 30 C20 40 0 40 0 20 C0 0 20 0 20 0" fill="url(#leafGradient2)" opacity="0.6" />
+    <path d="M30 10 L15 25" stroke="#F87171" stroke-width="0.5" opacity="0.6" />
+    <path d="M15 10 L30 25" stroke="#F87171" stroke-width="0.5" opacity="0.6" />
+  </g>
+  
+  <!-- Subtle ground -->
+  <rect x="0" y="280" width="600" height="120" fill="#DBEEE5" opacity="0.15" />
+  <rect x="0" y="320" width="600" height="80" fill="#DBEEE5" opacity="0.25" />
+  <rect x="0" y="360" width="600" height="40" fill="#DBEEE5" opacity="0.35" />
+  
+  <!-- Center glow effect -->
+  <circle cx="300" cy="200" r="150" fill="url(#glowGradient)" />
+  
+  <!-- Hands reaching out - more detailed with modern styling -->
+  <!-- Light hand (left) -->
+  <g filter="url(#softShadow)">
+    <path d="M200 250 C220 230 240 220 250 210 C255 205 257 202 258 200 C259 198 258 193 255 194 C252 195 248 200 245 205 C240 212 235 220 235 220" fill="url(#handLight)" />
+    <path d="M235 220 C232 215 228 212 225 214 C222 216 223 222 228 227 C230 229 232 230 232 230" fill="url(#handLight)" />
+    <path d="M232 230 C228 227 224 226 222 228 C220 230 222 235 225 238 C228 241 230 242 230 242" fill="url(#handLight)" />
+    <path d="M230 242 C225 240 220 238 218 240 C216 242 218 248 223 250 C225 251 200 250 200 250" fill="url(#handLight)" />
+    <path d="M200 250 C230 270 260 280 290 260" stroke="url(#handLight)" stroke-width="30" stroke-linecap="round" />
+  </g>
+  
+  <!-- Dark hand (right) -->
+  <g filter="url(#softShadow)">
+    <path d="M400 250 C380 230 360 220 350 210 C345 205 343 202 342 200 C341 198 342 193 345 194 C348 195 352 200 355 205 C360 212 365 220 365 220" fill="url(#handDark)" />
+    <path d="M365 220 C368 215 372 212 375 214 C378 216 377 222 372 227 C370 229 368 230 368 230" fill="url(#handDark)" />
+    <path d="M368 230 C372 227 376 226 378 228 C380 230 378 235 375 238 C372 241 370 242 370 242" fill="url(#handDark)" />
+    <path d="M370 242 C375 240 380 238 382 240 C384 242 382 248 377 250 C375 251 400 250 400 250" fill="url(#handDark)" />
+    <path d="M400 250 C370 270 340 280 310 260" stroke="url(#handDark)" stroke-width="30" stroke-linecap="round" />
+  </g>
+  
+  <!-- Hands touching highlight -->
+  <circle cx="300" cy="260" r="12" fill="#FFFFFF" opacity="0.7" />
+  <circle cx="300" cy="260" r="8" fill="#FFFFFF" opacity="0.9" />
+  <circle cx="300" cy="260" r="4" fill="#FFFFFF" />
+  
+  <!-- Abstract light lines connecting the hands -->
+  <path d="M250 220 C270 230 290 235 300 260" stroke="#20B2AA" stroke-width="0.5" stroke-opacity="0.5" />
+  <path d="M270 210 C280 225 290 240 300 260" stroke="#20B2AA" stroke-width="0.5" stroke-opacity="0.5" />
+  <path d="M350 220 C330 230 310 235 300 260" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.5" />
+  <path d="M330 210 C320 225 310 240 300 260" stroke="#F87171" stroke-width="0.5" stroke-opacity="0.5" />
+  
+  <!-- Small details in foreground -->
+  <path d="M100 340 C150 330 200 335 250 330 C300 325 350 330 400 325 C450 330 500 335 550 340" stroke="#20B2AA" stroke-width="0.8" stroke-opacity="0.5" fill="none" />
+  <path d="M50 360 C100 355 150 350 200 355 C250 360 300 355 350 350 C400 350 450 355 500 360" stroke="#20B2AA" stroke-width="0.5" stroke-opacity="0.4" fill="none" />
+  
+  <!-- Small grass elements in foreground -->
+  <g transform="translate(150, 350)">
+    <path d="M0 0 L5 -15 L10 0" stroke="#20B2AA" stroke-width="0.8" stroke-opacity="0.6" fill="none" />
+    <path d="M15 0 L20 -20 L25 0" stroke="#20B2AA" stroke-width="0.8" stroke-opacity="0.6" fill="none" />
+    <path d="M30 0 L35 -10 L40 0" stroke="#20B2AA" stroke-width="0.8" stroke-opacity="0.6" fill="none" />
+  </g>
+  
+  <g transform="translate(400, 350)">
+    <path d="M0 0 L5 -15 L10 0" stroke="#F87171" stroke-width="0.8" stroke-opacity="0.3" fill="none" />
+    <path d="M15 0 L20 -20 L25 0" stroke="#F87171" stroke-width="0.8" stroke-opacity="0.3" fill="none" />
+    <path d="M30 0 L35 -10 L40 0" stroke="#F87171" stroke-width="0.8" stroke-opacity="0.3" fill="none" />
+  </g>
+</svg>

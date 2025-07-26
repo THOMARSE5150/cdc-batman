@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract geometric background -->
+  <rect width="600" height="400" rx="20" fill="#F9FCFC" />
+  
+  <!-- Geometric patterns -->
+  <path d="M0 0L600 400" stroke="#4EB3A5" stroke-width="0.5" stroke-opacity="0.1" />
+  <path d="M0 400L600 0" stroke="#4EB3A5" stroke-width="0.5" stroke-opacity="0.1" />
+  
+  <!-- Grid of dots -->
+  <g opacity="0.15">
+    <circle cx="100" cy="100" r="2" fill="#4EB3A5" />
+    <circle cx="200" cy="100" r="2" fill="#4EB3A5" />
+    <circle cx="300" cy="100" r="2" fill="#4EB3A5" />
+    <circle cx="400" cy="100" r="2" fill="#4EB3A5" />
+    <circle cx="500" cy="100" r="2" fill="#4EB3A5" />
+    
+    <circle cx="100" cy="200" r="2" fill="#4EB3A5" />
+    <circle cx="200" cy="200" r="2" fill="#4EB3A5" />
+    <circle cx="300" cy="200" r="2" fill="#4EB3A5" />
+    <circle cx="400" cy="200" r="2" fill="#4EB3A5" />
+    <circle cx="500" cy="200" r="2" fill="#4EB3A5" />
+    
+    <circle cx="100" cy="300" r="2" fill="#4EB3A5" />
+    <circle cx="200" cy="300" r="2" fill="#4EB3A5" />
+    <circle cx="300" cy="300" r="2" fill="#4EB3A5" />
+    <circle cx="400" cy="300" r="2" fill="#4EB3A5" />
+    <circle cx="500" cy="300" r="2" fill="#4EB3A5" />
+  </g>
+  
+  <!-- Central geometric composition -->
+  <g transform="translate(300, 200)">
+    <!-- Base circle -->
+    <circle cx="0" cy="0" r="100" fill="white" stroke="#4EB3A5" stroke-width="1" stroke-opacity="0.3" />
+    
+    <!-- Geometric elements -->
+    <rect x="-60" y="-60" width="120" height="120" fill="#4EB3A5" opacity="0.05" />
+    <circle cx="0" cy="0" r="80" stroke="#4EB3A5" stroke-width="1" stroke-opacity="0.4" fill="none" />
+    <circle cx="0" cy="0" r="60" stroke="#4EB3A5" stroke-width="1" stroke-opacity="0.5" fill="none" />
+    <circle cx="0" cy="0" r="40" fill="#4EB3A5" opacity="0.1" />
+    
+    <!-- Abstract shape -->
+    <path d="M-30 -50L30 -50L40 -20L20 20L-20 20L-40 -20L-30 -50Z" fill="#FF9E9E" opacity="0.6" />
+    
+    <path d="M-20 -30L20 -30L30 0L10 30L-10 30L-30 0L-20 -30Z" fill="white" opacity="0.8" />
+    
+    <!-- Central point -->
+    <circle cx="0" cy="0" r="10" fill="#4EB3A5" opacity="0.8" />
+  </g>
+  
+  <!-- Lines connecting elements -->
+  <line x1="250" y1="150" x2="190" y2="90" stroke="#4EB3A5" stroke-width="0.5" stroke-opacity="0.5" />
+  <line x1="350" y1="150" x2="410" y2="90" stroke="#4EB3A5" stroke-width="0.5" stroke-opacity="0.5" />
+  <line x1="250" y1="250" x2="190" y2="310" stroke="#4EB3A5" stroke-width="0.5" stroke-opacity="0.5" />
+  <line x1="350" y1="250" x2="410" y2="310" stroke="#4EB3A5" stroke-width="0.5" stroke-opacity="0.5" />
+  
+  <!-- Corner elements -->
+  <circle cx="190" cy="90" r="15" fill="#4EB3A5" opacity="0.2" />
+  <circle cx="410" cy="90" r="15" fill="#4EB3A5" opacity="0.2" />
+  <circle cx="190" cy="310" r="15" fill="#4EB3A5" opacity="0.2" />
+  <circle cx="410" cy="310" r="15" fill="#4EB3A5" opacity="0.2" />
+  
+  <!-- Subtle circular gradient -->
+  <circle cx="300" cy="200" r="180" fill="url(#radialGradient)" opacity="0.3" />
+  
+  <!-- Floating elements -->
+  <circle cx="230" cy="130" r="5" fill="#FF9E9E" opacity="0.7" />
+  <circle cx="370" cy="130" r="5" fill="#FF9E9E" opacity="0.7" />
+  <circle cx="230" cy="270" r="5" fill="#FF9E9E" opacity="0.7" />
+  <circle cx="370" cy="270" r="5" fill="#FF9E9E" opacity="0.7" />
+  
+  <circle cx="150" cy="200" r="8" fill="#4EB3A5" opacity="0.2" />
+  <circle cx="450" cy="200" r="8" fill="#4EB3A5" opacity="0.2" />
+  <circle cx="300" cy="100" r="8" fill="#4EB3A5" opacity="0.2" />
+  <circle cx="300" cy="300" r="8" fill="#4EB3A5" opacity="0.2" />
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <radialGradient id="radialGradient" cx="300" cy="200" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4EB3A5" stop-opacity="0.05" />
+      <stop offset="1" stop-color="#4EB3A5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

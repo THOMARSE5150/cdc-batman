@@ -1,0 +1,120 @@
+You reached the start of the range → Jul 10, 2025 at 1:55 AM
+
+drwxr-xr-x    4 root     root          4096 Jul  9 15:55 .
+drwxr-xr-x    3 root     root          4096 Jul  9 15:55 ..
+drwxr-xr-x    2 root     root          4096 Jul  9 15:55 assets
+-rw-rw-r--    1 root     root         51525 Jul  9 15:55 favicon.ico
+-rw-rw-r--    1 root     root           529 Jul  9 15:55 favicon.svg
+-rw-rw-r--    1 root     root            53 Jul  9 15:55 googlee964abc67dc1d83e.html
+drwxr-xr-x    2 root     root          4096 Jul  9 15:55 images
+-rw-r--r--    1 root     root          4225 Jul  9 15:55 index.html
+-rw-rw-r--    1 root     root           293 Jul  9 15:55 robots.txt
+-rw-rw-r--    1 root     root           388 Jul  9 15:55 site.webmanifest
+-rw-rw-r--    1 root     root           524 Jul  9 15:55 sitemap.xml
+-rw-rw-r--    1 root     root          1882 Jul  9 15:55 sw.js
+
+✅ index.html verified
+
+total 272
+
+drwxr-xr-x    2 root     root          4096 Jul  9 15:55 .
+drwxr-xr-x    4 root     root          4096 Jul  9 15:55 ..
+-rw-r--r--    1 root     root         61711 Jul  9 15:55 aasw-badge.png
+-rw-r--r--    1 root     root           257 Jul  9 15:55 aboriginal_flag.svg
+-rw-r--r--    1 root     root         61711 Jul  9 15:55 accredited-social-worker-badge.png
+-rw-r--r--    1 root     root          7682 Jul  9 15:55 cdc_high_res_logo.png
+-rw-r--r--    1 root     root          8588 Jul  9 15:55 celia-logo-new.png
+-rw-r--r--    1 root     root         17099 Jul  9 15:55 footer_logo.png
+-rw-r--r--    1 root     root         16168 Jul  9 15:55 header_logo.png
+-rw-r--r--    1 root     root         18182 Jul  9 15:55 logo-circle.png
+-rw-r--r--    1 root     root         10413 Jul  9 15:55 logo.png
+-rw-r--r--    1 root     root         41576 Jul  9 15:55 torres_strait_flag.png
+
+✅ Images directory contents listed
+🚀 Build verification completed - ready for Railway!
+
+[ 8/11] RUN echo "🔍 Verifying build..." &&     ls -la dist/public/ &&     test -f "dist/public/index.html" &&     echo "✅ index.html verified" &&     ls -la dist/public/images/ &&     echo "✅ Images directory contents listed" &&     echo "🚀 Build verification completed - ready for Railway!"  ✔ 273 ms
+
+[ 9/11] RUN npm ci --only=production --no-audit --no-fund &&     npm cache clean --force
+
+npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
+
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+
+added 491 packages in 8s
+
+npm warn using --force Recommended protections disabled.
+
+[ 9/11] RUN npm ci --only=production --no-audit --no-fund &&     npm cache clean --force  ✔ 9 sec.
+
+[10/11] RUN addgroup -g 1001 -S nodejs &&     adduser -S server -u 1001 -G nodejs
+
+[10/11] RUN addgroup -g 1001 -S nodejs &&     adduser -S server -u 1001 -G nodejs  ✔ 214 ms
+
+[11/11] RUN chown -R server:nodejs /app
+
+[11/11] RUN chown -R server:nodejs /app  ✔ 32 sec.
+
+exporting to docker image format
+
+exporting to image
+
+importing to docker
+
+[auth] sharing credentials for production-asia-southeast1-eqsg3a.railway-registry.com
+
+[auth] sharing credentials for production-asia-southeast1-eqsg3a.railway-registry.com  ✔ 1 ms
+
+importing to docker  ✔ 28 sec.
+
+Build time: 154.78 seconds
+
+ 
+
+====================
+
+Starting Healthcheck
+
+====================
+
+
+Path: /health
+
+Retry window: 5m0s
+
+ 
+
+Attempt #1 failed with service unavailable. Continuing to retry for 4m59s
+
+Attempt #2 failed with service unavailable. Continuing to retry for 4m55s
+
+Attempt #3 failed with service unavailable. Continuing to retry for 4m43s
+
+Attempt #4 failed with service unavailable. Continuing to retry for 4m38s
+
+Attempt #5 failed with service unavailable. Continuing to retry for 4m30s
+
+Attempt #6 failed with service unavailable. Continuing to retry for 4m13s
+
+Attempt #7 failed with service unavailable. Continuing to retry for 3m43s
+
+Attempt #8 failed with service unavailable. Continuing to retry for 3m13s
+
+Attempt #9 failed with service unavailable. Continuing to retry for 2m42s
+
+Attempt #10 failed with service unavailable. Continuing to retry for 2m11s
+
+Attempt #11 failed with service unavailable. Continuing to retry for 1m41s
+
+Attempt #12 failed with service unavailable. Continuing to retry for 1m10s
+
+Attempt #13 failed with service unavailable. Continuing to retry for 40s
+
+Attempt #14 failed with service unavailable. Continuing to retry for 9s
+
+ 
+
+1/1 replicas never became healthy!
+
+Healthcheck failed!

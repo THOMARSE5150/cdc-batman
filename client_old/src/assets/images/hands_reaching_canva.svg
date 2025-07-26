@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Website color scheme -->
+    <linearGradient id="skyGradient" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E6F7F4" /> <!-- Light teal from website -->
+      <stop offset="100%" stop-color="#F0F7F7" /> <!-- Light background from website -->
+    </linearGradient>
+    
+    <!-- Primary teal/mint from the website -->
+    <linearGradient id="primaryTealGradient" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#88DDC9" /> <!-- Light version of primary: 175 66% 65% -->
+      <stop offset="100%" stop-color="#20B2AA" /> <!-- Primary: 175 66% 45% -->
+    </linearGradient>
+    
+    <!-- Forest gradient -->
+    <linearGradient id="forestGradient" x1="300" y1="50" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B2AA" stop-opacity="0.05" /> <!-- Primary teal very light -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.2" /> <!-- Primary teal light -->
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#skyGradient)" />
+  
+  <!-- Forest background -->
+  <rect x="0" y="50" width="600" height="350" fill="url(#forestGradient)" />
+  
+  <!-- Distant trees -->
+  <g opacity="0.3">
+    <!-- Left side trees -->
+    <rect x="40" y="90" width="10" height="310" fill="#5D5E5F" opacity="0.3" />
+    <rect x="70" y="60" width="15" height="340" fill="#5D5E5F" opacity="0.35" />
+    <rect x="100" y="80" width="8" height="320" fill="#5D5E5F" opacity="0.25" />
+    <rect x="130" y="100" width="12" height="300" fill="#5D5E5F" opacity="0.3" />
+    
+    <!-- Right side trees -->
+    <rect x="560" y="90" width="10" height="310" fill="#5D5E5F" opacity="0.3" />
+    <rect x="530" y="60" width="15" height="340" fill="#5D5E5F" opacity="0.35" />
+    <rect x="500" y="80" width="8" height="320" fill="#5D5E5F" opacity="0.25" />
+    <rect x="470" y="100" width="12" height="300" fill="#5D5E5F" opacity="0.3" />
+  </g>
+  
+  <!-- Foliage - using website colors -->
+  <g opacity="0.6">
+    <!-- Left side foliage - teal colors -->
+    <path d="M30 80 C50 70 80 90 70 120 C60 140 30 130 20 110 C10 90 20 85 30 80Z" fill="#20B2AA" opacity="0.15" />
+    <path d="M90 60 C110 50 140 70 130 100 C120 120 90 110 80 90 C70 70 80 65 90 60Z" fill="#20B2AA" opacity="0.2" />
+    <path d="M60 100 C80 90 110 110 100 140 C90 160 60 150 50 130 C40 110 50 105 60 100Z" fill="#20B2AA" opacity="0.25" />
+    <path d="M120 70 C140 60 170 80 160 110 C150 130 120 120 110 100 C100 80 110 75 120 70Z" fill="#20B2AA" opacity="0.15" />
+    
+    <!-- Right side foliage - accent colors for contrast -->
+    <path d="M570 80 C550 70 520 90 530 120 C540 140 570 130 580 110 C590 90 580 85 570 80Z" fill="#FF7F50" opacity="0.1" />
+    <path d="M510 60 C490 50 460 70 470 100 C480 120 510 110 520 90 C530 70 520 65 510 60Z" fill="#FF7F50" opacity="0.15" />
+    <path d="M540 100 C520 90 490 110 500 140 C510 160 540 150 550 130 C560 110 550 105 540 100Z" fill="#FF7F50" opacity="0.1" />
+    <path d="M480 70 C460 60 430 80 440 110 C450 130 480 120 490 100 C500 80 490 75 480 70Z" fill="#FF7F50" opacity="0.15" />
+  </g>
+  
+  <!-- Ground with green tint -->
+  <rect x="0" y="300" width="600" height="100" fill="#20B2AA" opacity="0.1" />
+  <rect x="0" y="320" width="600" height="80" fill="#20B2AA" opacity="0.15" />
+  <rect x="0" y="340" width="600" height="60" fill="#20B2AA" opacity="0.2" />
+  <rect x="0" y="360" width="600" height="40" fill="#20B2AA" opacity="0.25" />
+  
+  <!-- Grass details -->
+  <g opacity="0.7">
+    <path d="M150 360 L155 340 L160 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M170 360 L180 335 L190 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M210 360 L215 345 L220 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M240 360 L245 335 L250 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M270 360 L280 340 L290 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M310 360 L315 348 L320 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M340 360 L350 335 L360 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M380 360 L385 345 L390 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M410 360 L415 338 L420 360" stroke="#20B2AA" stroke-width="1" />
+    <path d="M440 360 L450 335 L460 360" stroke="#20B2AA" stroke-width="1" />
+  </g>
+  
+  <!-- White hand (left hand) - precisely modeled from the Canva image -->
+  <path d="M220 250 
+         C230 235 240 225 250 215 
+         C260 205 270 200 280 195 
+         C290 190 295 188 300 190 
+         C298 195 295 200 290 205 
+         C285 210 270 225 260 235 
+         C250 245 235 255 220 250Z" 
+      fill="#F8E3DD" />
+  
+  <!-- Brown hand (right hand) - precisely modeled from the Canva image -->
+  <path d="M380 250 
+         C370 235 360 225 350 215 
+         C340 205 330 200 320 195 
+         C310 190 305 188 300 190 
+         C302 195 305 200 310 205 
+         C315 210 330 225 340 235 
+         C350 245 365 255 380 250Z" 
+      fill="#70493A" />
+      
+  <!-- Glow at touching point -->
+  <circle cx="300" cy="190" r="12" fill="#FFFFFF" opacity="0.3" />
+  <circle cx="300" cy="190" r="8" fill="#FFFFFF" opacity="0.5" />
+  <circle cx="300" cy="190" r="4" fill="#FFFFFF" opacity="0.7" />
+</svg>

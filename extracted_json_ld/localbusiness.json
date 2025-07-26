@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Celia Dunsmore Counselling",
+  "image": "https://celiadunsmorecounselling.com.au/logo.png",
+  "url": "https://celiadunsmorecounselling.com.au",
+  "telephone": "+61438593071",
+  "email": "hello@celiadunsmorecounselling.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "503 Sydney Road",
+    "addressLocality": "Brunswick",
+    "addressRegion": "VIC",
+    "postalCode": "3056",
+    "addressCountry": "AU"
+  },
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Brunswick Primary Location",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "503 Sydney Road",
+        "addressLocality": "Brunswick",
+        "addressRegion": "VIC",
+        "postalCode": "3056",
+        "addressCountry": "AU"
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Coburg - Bell Street",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "81B Bell Street",
+        "addressLocality": "Coburg",
+        "addressRegion": "VIC",
+        "postalCode": "3058",
+        "addressCountry": "AU"
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Coburg - Solana Psychology",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "FL 1, 420 Sydney Road",
+        "addressLocality": "Coburg",
+        "addressRegion": "VIC",
+        "postalCode": "3058",
+        "addressCountry": "AU"
+      }
+    }
+  ],
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "priceRange": "$$"
+}

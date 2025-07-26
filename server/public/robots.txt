@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://celiadunsmorecounselling.com.au/sitemap.xml
+
+# Block sensitive areas (if any)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /temp/
+
+# Allow important directories
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Specific instructions for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific instructions for Bing
+User-agent: Bingbot
+Allow: /

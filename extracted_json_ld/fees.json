@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "url": "https://celiadunsmorecounselling.com.au/fees",
+  "priceCurrency": "AUD",
+  "price": "130.00",
+  "eligibleCustomerType": "New and returning clients",
+  "availability": "https://schema.org/InStock",
+  "description": "Standard counselling session with Celia Dunsmore. Fee is $130 per 50-minute session. Medicare rebates may apply with a valid Mental Health Care Plan."
+}

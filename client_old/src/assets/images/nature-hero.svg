@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with soft gradient -->
+  <rect width="600" height="400" rx="20" fill="url(#paint0_linear)" />
+  
+  <!-- Flowing water/river elements -->
+  <path d="M0 180C50 160 100 190 150 180C200 170 250 150 300 160C350 170 400 190 450 180C500 170 550 150 600 160" 
+        stroke="url(#waterGradient1)" stroke-width="30" stroke-linecap="round" opacity="0.3" />
+  
+  <path d="M0 220C50 200 100 230 150 220C200 210 250 190 300 200C350 210 400 230 450 220C500 210 550 190 600 200" 
+        stroke="url(#waterGradient2)" stroke-width="20" stroke-linecap="round" opacity="0.3" />
+        
+  <path d="M0 260C60 240 120 270 180 260C240 250 300 230 360 240C420 250 480 270 540 260C600 250" 
+        stroke="url(#waterGradient3)" stroke-width="15" stroke-linecap="round" opacity="0.25" />
+  
+  <!-- Glass container/sphere element -->
+  <circle cx="300" cy="200" r="100" fill="url(#glassSphereGradient)" opacity="0.7" />
+  <circle cx="300" cy="200" r="98" stroke="white" stroke-width="0.5" opacity="0.8" />
+  <circle cx="300" cy="200" r="95" stroke="white" stroke-width="0.3" opacity="0.5" />
+  
+  <!-- Elegant lotus flower in center of the glass sphere -->
+  <!-- Center of flower -->
+  <circle cx="300" cy="200" r="15" fill="#FFDE9E" />
+  <circle cx="300" cy="200" r="10" fill="#FFC977" />
+  
+  <!-- Inner petals -->
+  <g opacity="0.9">
+    <!-- Petal 1 -->
+    <path d="M300 185C310 170 320 165 330 175C340 185 335 200 325 210C315 220 300 215 290 205C280 195 290 180 300 185Z" 
+          fill="#F09EA3" />
+    <!-- Petal 2 -->
+    <path d="M315 185C330 180 345 185 350 195C355 205 345 220 330 225C315 230 300 220 295 205C290 190 305 185 315 185Z" 
+          fill="#F09EA3" />
+    <!-- Petal 3 -->
+    <path d="M315 215C330 220 345 215 350 205C355 195 345 180 330 175C315 170 300 180 295 195C290 210 305 215 315 215Z" 
+          fill="#F09EA3" />
+    <!-- Petal 4 -->
+    <path d="M285 215C270 220 255 215 250 205C245 195 255 180 270 175C285 170 300 180 305 195C310 210 295 215 285 215Z" 
+          fill="#F09EA3" />
+    <!-- Petal 5 -->
+    <path d="M285 185C270 180 255 185 250 195C245 205 255 220 270 225C285 230 300 220 305 205C310 190 295 185 285 185Z" 
+          fill="#F09EA3" />
+  </g>
+  
+  <!-- Outer petals -->
+  <g opacity="0.8">
+    <!-- Petal 1 -->
+    <path d="M300 165C315 145 335 135 350 150C365 165 360 190 345 205C330 220 305 215 290 200C275 185 290 160 300 165Z" 
+          fill="#E27A85" />
+    <!-- Petal 2 -->
+    <path d="M335 170C360 160 385 170 395 190C405 210 385 235 360 245C335 255 310 235 300 210C290 185 315 175 335 170Z" 
+          fill="#E27A85" />
+    <!-- Petal 3 -->
+    <path d="M335 230C360 240 385 230 395 210C405 190 385 165 360 155C335 145 310 165 300 190C290 215 315 225 335 230Z" 
+          fill="#E27A85" />
+    <!-- Petal 4 -->
+    <path d="M265 230C240 240 215 230 205 210C195 190 215 165 240 155C265 145 290 165 300 190C310 215 285 225 265 230Z" 
+          fill="#E27A85" />
+    <!-- Petal 5 -->
+    <path d="M265 170C240 160 215 170 205 190C195 210 215 235 240 245C265 255 290 235 300 210C310 185 285 175 265 170Z" 
+          fill="#E27A85" />
+  </g>
+  
+  <!-- Plant elements surrounding the sphere -->
+  <!-- Stems and leaves -->
+  <path d="M180 320C200 280 220 260 240 240" stroke="#4EB3A5" stroke-width="3" stroke-linecap="round" />
+  <path d="M210 300C230 280 250 270 280 260" stroke="#4EB3A5" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M420 320C400 280 380 260 360 240" stroke="#4EB3A5" stroke-width="3" stroke-linecap="round" />
+  <path d="M390 300C370 280 350 270 320 260" stroke="#4EB3A5" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Leaf 1 -->
+  <path d="M230 260C240 250 255 245 265 255C275 265 270 280 260 290C250 300 235 300 225 290C215 280 220 265 230 260Z" 
+        fill="#4EB3A5" opacity="0.8" />
+  
+  <!-- Leaf 2 -->
+  <path d="M370 260C360 250 345 245 335 255C325 265 330 280 340 290C350 300 365 300 375 290C385 280 380 265 370 260Z" 
+        fill="#4EB3A5" opacity="0.8" />
+  
+  <!-- Leaf 3 -->
+  <path d="M190 280C200 270 215 265 225 275C235 285 230 300 220 310C210 320 195 320 185 310C175 300 180 285 190 280Z" 
+        fill="#4EB3A5" opacity="0.7" />
+  
+  <!-- Leaf 4 -->
+  <path d="M410 280C400 270 385 265 375 275C365 285 370 300 380 310C390 320 405 320 415 310C425 300 420 285 410 280Z" 
+        fill="#4EB3A5" opacity="0.7" />
+  
+  <!-- Dew drops -->
+  <circle cx="240" cy="265" r="3" fill="white" opacity="0.9" />
+  <circle cx="360" cy="265" r="3" fill="white" opacity="0.9" />
+  <circle cx="220" cy="295" r="2" fill="white" opacity="0.8" />
+  <circle cx="380" cy="295" r="2" fill="white" opacity="0.8" />
+  
+  <!-- Light effects -->
+  <circle cx="275" cy="180" r="3" fill="white" opacity="0.9" />
+  <circle cx="325" cy="180" r="3" fill="white" opacity="0.9" />
+  <circle cx="290" cy="150" r="2" fill="white" opacity="0.7" />
+  <circle cx="310" cy="150" r="2" fill="white" opacity="0.7" />
+  
+  <!-- Light rays -->
+  <g opacity="0.15">
+    <path d="M300 100L300 300" stroke="white" stroke-width="80" stroke-linecap="round" />
+    <path d="M200 200L400 200" stroke="white" stroke-width="40" stroke-linecap="round" />
+  </g>
+  
+  <!-- Additional organic curves -->
+  <path d="M150 100C180 120 220 110 250 120" stroke="#4EB3A5" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+  <path d="M450 100C420 120 380 110 350 120" stroke="#4EB3A5" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+  <path d="M100 150C130 130 150 150 180 140" stroke="#4EB3A5" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
+  <path d="M500 150C470 130 450 150 420 140" stroke="#4EB3A5" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E6F7F4" />
+      <stop offset="1" stop-color="#C6ECE6" />
+    </linearGradient>
+    
+    <linearGradient id="waterGradient1" x1="0" y1="180" x2="600" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4EB3A5" />
+      <stop offset="0.5" stop-color="#73C8BD" />
+      <stop offset="1" stop-color="#4EB3A5" />
+    </linearGradient>
+    
+    <linearGradient id="waterGradient2" x1="0" y1="220" x2="600" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#73C8BD" />
+      <stop offset="0.5" stop-color="#4EB3A5" />
+      <stop offset="1" stop-color="#73C8BD" />
+    </linearGradient>
+    
+    <linearGradient id="waterGradient3" x1="0" y1="260" x2="600" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4EB3A5" />
+      <stop offset="0.5" stop-color="#73C8BD" />
+      <stop offset="1" stop-color="#4EB3A5" />
+    </linearGradient>
+    
+    <radialGradient id="glassSphereGradient" cx="300" cy="180" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white" stop-opacity="0.8" />
+      <stop offset="0.5" stop-color="white" stop-opacity="0.4" />
+      <stop offset="1" stop-color="white" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,0 +1,121 @@
+You reached the start of the range → Jul 9, 2025 at 9:24 PM
+
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+
+vite v5.4.14 building for production...
+
+transforming...
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+✓ 2475 modules transformed.
+
+rendering chunks...
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/client/src/assets/images/hero_image_canva_optimized.webp is dynamically imported by /app/client/src/components/ui/PreloadCriticalResources.tsx but also statically imported by /app/client/src/components/sections/HeroSection.tsx, dynamic import will not move module into another chunk.
+
+
+computing gzip size...
+
+../dist/public/index.html                                         5.64 kB │ gzip:   1.94 kB
+
+../dist/public/assets/hero_image_canva_optimized-BloUw-DB.webp   61.37 kB
+
+../dist/public/assets/Calendar-DDKpoaqD.css                       2.75 kB │ gzip:   0.75 kB
+
+../dist/public/assets/main-DA3tsGij.css                         161.98 kB │ gzip:  25.14 kB
+
+../dist/public/assets/circle-B1Yn0J-r.js                          0.29 kB │ gzip:   0.24 kB
+
+../dist/public/assets/arrow-left-DJKwm3xI.js                      0.33 kB │ gzip:   0.27 kB
+
+../dist/public/assets/search-D906X3GL.js                          0.34 kB │ gzip:   0.27 kB
+
+../dist/public/assets/user-round-BPw1vNL1.js                      0.34 kB │ gzip:   0.28 kB
+
+../dist/public/assets/user-CjTBF1pT.js                            0.36 kB │ gzip:   0.28 kB
+../dist/public/assets/message-square-KhgpONhD.js                  0.43 kB │ gzip:   0.32 kB
+
+../dist/public/assets/house-a2Boorai.js                           0.46 kB │ gzip:   0.32 kB
+
+../dist/public/assets/index-1tY3IpQN.js                           0.56 kB │ gzip:   0.41 kB
+
+../dist/public/assets/Sitemap-BhREhciY.js                         0.59 kB │ gzip:   0.39 kB
+
+../dist/public/assets/Breadcrumb-DU1sEACt.js                      1.07 kB │ gzip:   0.59 kB
+
+../dist/public/assets/PageHeader-CMQ--ELb.js                      1.97 kB │ gzip:   0.92 kB
+
+../dist/public/assets/index-DlRi8JjA.js                           2.16 kB │ gzip:   1.16 kB
+
+../dist/public/assets/not-found-B-w0n6vT.js                       2.48 kB │ gzip:   1.03 kB
+
+../dist/public/assets/FAQ-C3z9BMtM.js                             2.83 kB │ gzip:   1.28 kB
+
+../dist/public/assets/BookingHelp-BjmOWxYl.js                     5.91 kB │ gzip:   2.04 kB
+
+../dist/public/assets/accordion-B7CTqIc7.js                       6.55 kB │ gzip:   2.43 kB
+
+../dist/public/assets/Fees-BrLdSrv0.js                            6.82 kB │ gzip:   1.87 kB
+
+../dist/public/assets/ClientDiversity-Czu5qDlG.js                14.85 kB │ gzip:   3.38 kB
+
+../dist/public/assets/Locations-CKbBRFSl.js                      14.92 kB │ gzip:   4.90 kB
+
+../dist/public/assets/Services-B3mBWkga.js                       17.51 kB │ gzip:   4.44 kB
+
+../dist/public/assets/alert-C6VKIjc8.js                          22.03 kB │ gzip:   6.44 kB
+
+../dist/public/assets/MeetCelia-3ksC9BCR.js                      28.18 kB │ gzip:   6.67 kB
+
+../dist/public/assets/AdminContacts-B82jziIf.js                  32.03 kB │ gzip:   8.80 kB
+
+../dist/public/assets/card-EY5iGkws.js                           38.87 kB │ gzip:  13.40 kB
+
+../dist/public/assets/Calendar-DPT7cmSk.js                       68.32 kB │ gzip:  20.14 kB
+
+../dist/public/assets/Contact-DoL5ZcRN.js                       117.50 kB │ gzip:  30.66 kB
+../dist/public/assets/main-BABn3jQQ.js                          487.58 kB │ gzip: 150.66 kB
+
+✓ built in 5.35s
+
+
+  dist/index.js  82.5kb
+
+⚡ Done in 7ms
+
+[stage-0 13/15] RUN --mount=type=cache,id=s/7f3d86be-888a-4d4c-b71c-44e9968d75f9-node_modules/cache,target=/app/node_modules/.cache npm run build  ✔ 5 sec.
+
+[stage-0 14/15] RUN printf '\nPATH=/app/node_modules/.bin:$PATH' >> /root/.profile
+
+[stage-0 14/15] RUN printf '\nPATH=/app/node_modules/.bin:$PATH' >> /root/.profile  ✔ 94 ms
+
+[stage-0 15/15] COPY . /app
+
+[stage-0 15/15] COPY . /app  ✔ 84 ms
+
+exporting to docker image format
+
+exporting to image
+
+importing to docker
+
+[auth] sharing credentials for production-asia-southeast1-eqsg3a.railway-registry.com
+
+[auth] sharing credentials for production-asia-southeast1-eqsg3a.railway-registry.com  ✔ 1 ms
+
+importing to docker  ✔ 11 sec.
+
+=== Successfully Built! ===
+
+Run:
+
+docker run -it production-asia-southeast1-eqsg3a.railway-registry.com/7f3d86be-888a-4d4c-b71c-44e9968d75f9:e55ba858-1787-4953-ac0e-d518d56763d5
+
+Build time: 90.31 seconds

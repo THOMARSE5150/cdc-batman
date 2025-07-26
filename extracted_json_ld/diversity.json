@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Celia Dunsmore Counselling",
+  "url": "https://celiadunsmorecounselling.com.au/client-diversity",
+  "policy": "We are committed to providing inclusive and non-judgmental support to individuals of all backgrounds, identities, and lived experiences.",
+  "sameAs": [],
+  "founder": {
+    "@type": "Person",
+    "name": "Celia Dunsmore"
+  }
+}

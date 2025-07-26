@@ -1,0 +1,100 @@
+You reached the start of the range → Jul 9, 2025 at 11:30 PM
+
+dist/public/assets/FAQ-Bd9CK-kd.js                             2.83 kB │ gzip:   1.28 kB
+
+dist/public/assets/BookingHelp-ChdrdBUE.js                     5.91 kB │ gzip:   2.01 kB
+dist/public/assets/accordion-CZ9BSFNG.js                       6.55 kB │ gzip:   2.42 kB
+dist/public/assets/Fees-qJRYw163.js                            6.82 kB │ gzip:   1.86 kB
+dist/public/assets/ClientDiversity-DZcru2Gc.js                14.85 kB │ gzip:   3.40 kB
+dist/public/assets/Locations-CrEaKp_x.js                      14.92 kB │ gzip:   4.91 kB
+
+dist/public/assets/Services-zvBypO5l.js                       17.51 kB │ gzip:   4.42 kB
+
+dist/public/assets/alert-CXmSNd1d.js                          22.03 kB │ gzip:   6.50 kB
+
+dist/public/assets/MeetCelia-oD1sZj7A.js                      28.18 kB │ gzip:   6.66 kB
+
+dist/public/assets/AdminContacts-ClI4P0rK.js                  32.03 kB │ gzip:   8.83 kB
+
+dist/public/assets/card-uhXGhIxv.js                           38.87 kB │ gzip:  13.41 kB
+dist/public/assets/Calendar-4wkfeHlK.js                       68.32 kB │ gzip:  20.17 kB
+
+dist/public/assets/Contact-aCsJ_BSZ.js                       117.50 kB │ gzip:  30.78 kB
+
+dist/public/assets/main-8RH0xqrR.js                          488.72 kB │ gzip: 151.46 kB
+
+✓ built in 5.91s
+
+✅ Build completed
+
+total 64
+
+drwxr-xr-x    4 root     root          4096 Jul  9 13:31 .
+drwxr-xr-x    3 root     root          4096 Jul  9 13:31 ..
+drwxr-xr-x    2 root     root          4096 Jul  9 13:31 assets
+-rw-rw-r--    1 root     root          1505 Jul  9 13:31 favicon.ico
+drwxr-xr-x    2 root     root          4096 Jul  9 13:31 images
+-rw-r--r--    1 root     root          5642 Jul  9 13:31 index.html
+-rw-rw-r--    1 root     root         16168 Jul  9 13:31 logo.svg
+-rw-rw-r--    1 root     root            88 Jul  9 13:31 robots.txt
+-rw-rw-r--    1 root     root          1537 Jul  9 13:31 sitemap.xml
+-rw-rw-r--    1 root     root         11252 Jul  9 13:31 sw.js
+
+[builder 7/7] RUN npm run build &&     echo "✅ Build completed" &&     ls -la client/dist/public/ &&     test -f "client/dist/public/index.html" || (echo "❌ Build failed - no index.html" && exit 1)  ✔ 7 sec.
+
+[production  7/11] COPY --from=builder --chown=server:nodejs /app/client/dist/public ./dist/public
+
+[production  7/11] COPY --from=builder --chown=server:nodejs /app/client/dist/public ./dist/public  ✔ 228 ms
+
+[production  8/11] COPY --from=builder --chown=server:nodejs /app/public/images ./dist/public/images
+
+[production  8/11] COPY --from=builder --chown=server:nodejs /app/public/images ./dist/public/images  ✔ 20 ms
+
+[production  9/11] COPY --from=builder --chown=server:nodejs /app/server.js ./server.js
+
+[production  9/11] COPY --from=builder --chown=server:nodejs /app/server.js ./server.js  ✔ 38 ms
+
+[production 10/11] COPY --from=builder --chown=server:nodejs /app/server ./server
+
+[production 10/11] COPY --from=builder --chown=server:nodejs /app/server ./server  ✔ 28 ms
+
+[production 11/11] RUN ls -la dist/public/ &&     test -f "dist/public/index.html" &&     test -f "dist/public/images/header_logo.png" &&     echo "✅ All assets verified" &&     chown -R server:nodejs /app
+
+total 72
+
+drwxr-xr-x    1 server   nodejs        4096 Jul  9 13:31 .
+drwxr-xr-x    1 server   nodejs        4096 Jul  9 13:31 ..
+drwxr-xr-x    2 server   nodejs        4096 Jul  9 13:31 assets
+-rw-rw-r--    1 server   nodejs        1505 Jul  9 13:31 favicon.ico
+drwxr-xr-x    1 server   nodejs        4096 Jul  9 13:28 images
+-rw-r--r--    1 server   nodejs        5642 Jul  9 13:31 index.html
+-rw-rw-r--    1 server   nodejs       16168 Jul  9 13:31 logo.svg
+-rw-rw-r--    1 server   nodejs          88 Jul  9 13:31 robots.txt
+-rw-rw-r--    1 server   nodejs        1537 Jul  9 13:31 sitemap.xml
+-rw-rw-r--    1 server   nodejs       11252 Jul  9 13:31 sw.js
+
+✕ [production 11/11] RUN ls -la dist/public/ &&     test -f "dist/public/index.html" &&     test -f "dist/public/images/header_logo.png" &&     echo "✅ All assets verified" &&     chown -R server:nodejs /app 
+process "/bin/sh -c ls -la dist/public/ &&     test -f \"dist/public/index.html\" &&     test -f \"dist/public/images/header_logo.png\" &&     echo \"✅ All assets verified\" &&     chown -R server:nodejs /app" did not complete successfully: exit code: 1
+ 
+
+Dockerfile:54
+
+-------------------
+
+53 |     # Verify build and set permissions
+
+54 | >>> RUN ls -la dist/public/ && \
+
+55 | >>>     test -f "dist/public/index.html" && \
+
+56 | >>>     test -f "dist/public/images/header_logo.png" && \
+
+57 | >>>     echo "✅ All assets verified" && \
+
+58 | >>>     chown -R server:nodejs /app
+
+59 |
+
+-------------------
+
+ERROR: failed to build: failed to solve: process "/bin/sh -c ls -la dist/public/ &&     test -f \"dist/public/index.html\" &&     test -f \"dist/public/images/header_logo.png\" &&     echo \"✅ All assets verified\" &&     chown -R server:nodejs /app" did not complete successfully: exit code: 1

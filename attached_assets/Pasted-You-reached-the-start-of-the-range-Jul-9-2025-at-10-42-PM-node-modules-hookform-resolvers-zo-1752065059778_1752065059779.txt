@@ -1,0 +1,114 @@
+You reached the start of the range → Jul 9, 2025 at 10:42 PM
+
+
+./node_modules/@hookform/resolvers/zod/dist
+./node_modules/@hookform/resolvers/effect-ts/dist
+./node_modules/@hookform/resolvers/io-ts/dist
+./node_modules/@hookform/resolvers/yup/dist
+./node_modules/@hookform/resolvers/vine/dist
+./node_modules/@hookform/resolvers/vest/dist
+./node_modules/@hookform/resolvers/typeschema/dist
+./node_modules/@hookform/resolvers/computed-types/dist
+./node_modules/@hookform/resolvers/typanion/dist
+./node_modules/@hookform/resolvers/nope/dist
+./node_modules/@hookform/resolvers/valibot/dist
+./node_modules/@hookform/resolvers/ajv/dist
+./node_modules/@hookform/resolvers/joi/dist
+./node_modules/@hookform/resolvers/superstruct/dist
+./node_modules/@hookform/resolvers/dist
+./node_modules/@hookform/resolvers/typebox/dist
+./node_modules/@hookform/resolvers/fluentvalidation-ts/dist
+./node_modules/react-style-singleton/dist
+./node_modules/react-hook-form/dist
+./node_modules/regexparam/dist
+./node_modules/agent-base/dist
+./node_modules/@vitejs/plugin-react/dist
+./node_modules/object-hash/dist
+./node_modules/vaul/dist
+
+
+./node_modules/@replit/vite-plugin-cartographer/dist
+./node_modules/@replit/vite-plugin-runtime-error-modal/dist
+./node_modules/d3-interpolate/dist
+./node_modules/ts-interface-checker/dist
+./node_modules/react-remove-scroll/dist
+./node_modules/class-variance-authority/dist
+./node_modules/resolve-pkg-maps/dist
+./node_modules/d3-color/dist
+./node_modules/deepmerge/dist
+./node_modules/get-user-locale/dist
+./node_modules/rollup/dist
+./node_modules/tw-animate-css/dist
+./node_modules/cmdk/dist
+./node_modules/pg-protocol/dist
+./node_modules/use-sidecar/dist
+./node_modules/@tailwindcss/vite/node_modules/tailwindcss/dist
+./node_modules/@tailwindcss/vite/dist
+./node_modules/@tailwindcss/node/node_modules/jiti/dist
+./node_modules/@tailwindcss/node/node_modules/tailwindcss/dist
+./node_modules/@tailwindcss/node/dist
+./node_modules/@tailwindcss/typography/node_modules/postcss-selector-parser/dist
+./node_modules/@stripe/stripe-js/dist
+./node_modules/@stripe/react-stripe-js/dist
+./node_modules/internmap/dist
+
+Looking for index.html files:
+
+./client/index.html
+
+./client/dist/public/index.html
+./node_modules/url-template/test/index.html
+
+Checking client directory:
+
+total 40
+
+drwxrwxr-x    1 root     root          4096 Jul  9 12:43 .
+drwxr-xr-x    1 root     root          4096 Jul  9 12:43 ..
+drwxrwxr-x    3 root     root          4096 Jul  9 12:41 assets
+drwxr-xr-x    3 root     root          4096 Jul  9 12:43 dist
+-rw-rw-r--    1 root     root           166 Jul  9 12:41 env.d.ts
+-rw-rw-r--    1 root     root          5923 Jul  9 12:41 index.html
+drwxrwxr-x    3 root     root          4096 Jul  9 12:41 public
+drwxrwxr-x    8 root     root          4096 Jul  9 12:41 src
+
+Final verification...
+❌ Build location issue - trying alternative paths
+
+./client/dist/public/index.html
+
+./client/dist/public/sw.js
+./client/dist/public/assets/not-found-B-w0n6vT.js
+./client/dist/public/assets/Breadcrumb-DU1sEACt.js
+./client/dist/public/assets/arrow-left-DJKwm3xI.js
+./client/dist/public/assets/Contact-DoL5ZcRN.js
+./client/dist/public/assets/FAQ-C3z9BMtM.js
+./client/dist/public/assets/accordion-B7CTqIc7.js
+./client/dist/public/assets/Sitemap-BhREhciY.js
+./client/dist/public/assets/main-DA3tsGij.css
+
+[stage-0 7/7] RUN echo "=== DOCKER BUILD DEBUG ===" &&     echo "Working directory: $(pwd)" &&     echo "Directory contents before build:" &&     ls -la &&     echo "Starting build process..." &&     npm run build &&     echo "Build completed, checking all possible locations..." &&     echo "Root directory after build:" &&     ls -la &&     echo "Looking for dist directories:" &&     find . -name "dist" -type d 2>/dev/null || echo "No dist directories found" &&     echo "Looking for index.html files:" &&     find . -name "index.html" 2>/dev/null || echo "No index.html files found" &&     echo "Checking client directory:" &&     ls -la client/ 2>/dev/null || echo "No client directory" &&     echo "Final verification..." &&     if [ -d "dist/public" ] && [ -f "dist/public/index.html" ]; then         echo "✅ Build successful - found dist/public/index.html";         ls -la dist/public/ | head -10;     elif [ -d "dist/dist/public" ] && [ -f "dist/dist/public/index.html" ]; then         echo "🔧 Found nested build - fixing structure";         mv dist/dist/* dist/ && rmdir dist/dist;         echo "✅ Fixed: moved dist/dist/public to dist/public";         ls -la dist/public/ | head -10;     else         echo "❌ Build location issue - trying alternative paths";         find . -name "*.html" -o -name "*.js" -o -name "*.css" | grep -E "(dist|build)" | head -10;     fi  ✔ 6 sec.
+
+✕ [stage-1  6/13] COPY --from=0 /app/dist ./dist 
+failed to calculate checksum of ref o1clb1pbo4utb2p7suxniov0i::vo1u9ogb6de7xlxvonpkax8sv: "/app/dist": not found
+ 
+
+Dockerfile:63
+
+-------------------
+
+61 |
+
+62 |     # Copy built application from previous stage
+
+63 | >>> COPY --from=0 /app/dist ./dist
+
+64 |     COPY --from=0 /app/server.js ./
+
+65 |     COPY --from=0 /app/start-railway.js ./
+
+-------------------
+
+ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref o1clb1pbo4utb2p7suxniov0i::vo1u9ogb6de7xlxvonpkax8sv: "/app/dist": not found
+You reached the present time
+

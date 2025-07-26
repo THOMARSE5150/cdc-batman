@@ -1,0 +1,101 @@
+You reached the start of the range → Jul 10, 2025 at 1:20 AM
+
+🧹 Preparing directories...
+
+📸 Copying static assets...
+
+✅ Copied 1 images
+
+✅ Copied 7 public files
+🏗️ Creating static index.html...
+
+🔧 Creating Railway-ready static site...
+
+✅ Static deployment created successfully!
+
+📁 Files created:
+
+  - dist/public/index.html (main site)
+
+  - dist/public/images/ (logo and assets)
+
+🚀 Ready for Railway deployment!
+
+📋 Build verification:
+
+total 100
+
+drwxr-xr-x    4 root     root          4096 Jul  9 15:20 .
+drwxr-xr-x    3 root     root          4096 Jul  9 15:20 ..
+drwxr-xr-x    2 root     root          4096 Jul  9 15:20 assets
+-rw-rw-r--    1 root     root         51525 Jul  9 15:20 favicon.ico
+-rw-rw-r--    1 root     root           529 Jul  9 15:20 favicon.svg
+-rw-rw-r--    1 root     root            53 Jul  9 15:20 googlee964abc67dc1d83e.html
+drwxr-xr-x    2 root     root          4096 Jul  9 15:20 images
+-rw-r--r--    1 root     root          4225 Jul  9 15:20 index.html
+-rw-rw-r--    1 root     root           293 Jul  9 15:20 robots.txt
+-rw-rw-r--    1 root     root           388 Jul  9 15:20 site.webmanifest
+-rw-rw-r--    1 root     root           524 Jul  9 15:20 sitemap.xml
+-rw-rw-r--    1 root     root          1882 Jul  9 15:20 sw.js
+
+🔍 Checking for index.html...
+
+✅ index.html found
+✅ Static deployment ready for Railway!
+
+[builder 7/7] RUN echo "🚀 Creating static deployment for Railway..." &&     chmod +x static-build.js &&     node static-build.js &&     echo "📋 Build verification:" &&     ls -la dist/public/ &&     echo "🔍 Checking for index.html..." &&     test -f "dist/public/index.html" && echo "✅ index.html found" || (echo "❌ Build failed - no index.html" && exit 1) &&     echo "✅ Static deployment ready for Railway!"  ✔ 237 ms
+
+[production  7/10] COPY --from=builder --chown=server:nodejs /app/dist/public ./dist/public
+
+[production  7/10] COPY --from=builder --chown=server:nodejs /app/dist/public ./dist/public  ✔ 237 ms
+
+[production  8/10] COPY --from=builder --chown=server:nodejs /app/server.js ./server.js
+
+[production  8/10] COPY --from=builder --chown=server:nodejs /app/server.js ./server.js  ✔ 37 ms
+
+[production  9/10] COPY --from=builder --chown=server:nodejs /app/server ./server
+
+[production  9/10] COPY --from=builder --chown=server:nodejs /app/server ./server  ✔ 31 ms
+
+[production 10/10] RUN ls -la dist/public/ &&     test -f "dist/public/index.html" &&     test -f "dist/public/images/header_logo.png" &&     echo "✅ All assets verified" &&     chown -R server:nodejs /app
+
+total 100
+
+drwxr-xr-x    4 server   nodejs        4096 Jul  9 15:20 .
+drwxr-xr-x    3 server   nodejs        4096 Jul  9 15:20 ..
+drwxr-xr-x    2 server   nodejs        4096 Jul  9 15:20 assets
+-rw-rw-r--    1 server   nodejs       51525 Jul  9 15:20 favicon.ico
+-rw-rw-r--    1 server   nodejs         529 Jul  9 15:20 favicon.svg
+-rw-rw-r--    1 server   nodejs          53 Jul  9 15:20 googlee964abc67dc1d83e.html
+drwxr-xr-x    2 server   nodejs        4096 Jul  9 15:20 images
+-rw-r--r--    1 server   nodejs        4225 Jul  9 15:20 index.html
+-rw-rw-r--    1 server   nodejs         293 Jul  9 15:20 robots.txt
+-rw-rw-r--    1 server   nodejs         388 Jul  9 15:20 site.webmanifest
+-rw-rw-r--    1 server   nodejs         524 Jul  9 15:20 sitemap.xml
+-rw-rw-r--    1 server   nodejs        1882 Jul  9 15:20 sw.js
+
+✕ [production 10/10] RUN ls -la dist/public/ &&     test -f "dist/public/index.html" &&     test -f "dist/public/images/header_logo.png" &&     echo "✅ All assets verified" &&     chown -R server:nodejs /app 
+process "/bin/sh -c ls -la dist/public/ &&     test -f \"dist/public/index.html\" &&     test -f \"dist/public/images/header_logo.png\" &&     echo \"✅ All assets verified\" &&     chown -R server:nodejs /app" did not complete successfully: exit code: 1
+ 
+
+Dockerfile:57
+
+-------------------
+
+56 |     # Verify build and set permissions
+
+57 | >>> RUN ls -la dist/public/ && \
+
+58 | >>>     test -f "dist/public/index.html" && \
+
+59 | >>>     test -f "dist/public/images/header_logo.png" && \
+
+60 | >>>     echo "✅ All assets verified" && \
+
+61 | >>>     chown -R server:nodejs /app
+
+62 |
+
+-------------------
+
+ERROR: failed to build: failed to solve: process "/bin/sh -c ls -la dist/public/ &&     test -f \"dist/public/index.html\" &&     test -f \"dist/public/images/header_logo.png\" &&     echo \"✅ All assets verified\" &&     chown -R server:nodejs /app" did not complete successfully: exit code: 1

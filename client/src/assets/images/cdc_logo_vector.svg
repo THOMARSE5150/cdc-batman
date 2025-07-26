@@ -1,0 +1,34 @@
+<svg width="200" height="160" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text { 
+        font-family: 'Inter', sans-serif; 
+        font-weight: 400; 
+        letter-spacing: 0.2em; 
+        fill: #4a90a4; 
+      }
+      .logo-circle { 
+        fill: none; 
+        stroke: #4a90a4; 
+        stroke-width: 2; 
+      }
+    </style>
+  </defs>
+  
+  <!-- Circular design elements -->
+  <g transform="translate(100, 80)">
+    <!-- Top arc -->
+    <path d="M -60 -20 Q 0 -40 60 -20" class="logo-circle"/>
+    
+    <!-- Bottom arc -->
+    <path d="M -60 20 Q 0 40 60 20" class="logo-circle"/>
+    
+    <!-- Central text -->
+    <text x="0" y="-5" text-anchor="middle" class="logo-text" font-size="8">
+      CELIA DUNSMORE
+    </text>
+    <text x="0" y="8" text-anchor="middle" class="logo-text" font-size="8">
+      COUNSELLING
+    </text>
+  </g>
+</svg>

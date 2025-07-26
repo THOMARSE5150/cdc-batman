@@ -1,0 +1,21 @@
+DNS RECORDS FOR CELIADUNSMORECOUNSELLING.COM.AU
+
+Copy and paste these exact values into your DNS management panel:
+
+=== SPF RECORD ===
+Type: TXT
+Name: @
+Value: v=spf1 include:_spf.google.com ~all
+TTL: 3600
+
+=== DMARC RECORD ===
+Type: TXT  
+Name: _dmarc
+Value: v=DMARC1; p=none; rua=mailto:hello@celiadunsmorecounselling.com.au; ruf=mailto:hello@celiadunsmorecounselling.com.au; fo=1
+TTL: 3600
+
+IMPORTANT: 
+- Use "@" for the SPF record name (represents your root domain)
+- Use "_dmarc" exactly for the DMARC record name
+- Both are TXT type records
+- Wait 24-48 hours for full propagation

@@ -1,0 +1,103 @@
+You reached the start of the range → Jul 18, 2025 at 10:42 PM
+
+
+-rw-r--r--    1 root     root           529 Jul 18 12:43 favicon.svg
+-rw-r--r--    1 root     root            53 Jul 18 12:43 googlee964abc67dc1d83e.html
+drwxr-xr-x    2 root     root          4096 Jul 18 12:43 images
+-rw-r--r--    1 root     root         13163 Jul 18 12:43 index.html
+-rw-r--r--    1 root     root         16168 Jul 18 12:43 logo.svg
+-rw-r--r--    1 root     root            88 Jul 18 12:43 robots.txt
+-rw-r--r--    1 root     root          2336 Jul 18 12:43 site.webmanifest
+-rw-r--r--    1 root     root          1537 Jul 18 12:43 sitemap.xml
+-rw-r--r--    1 root     root         11104 Jul 18 12:43 sw.js
+-rw-r--r--    1 root     root          9037 Jul 18 12:43 website-enhancement-summary-celia.html
+
+✅ Static assets verified for Railway
+
+[ 9/10] RUN echo "🔍 Verifying Railway deployment requirements..." &&     test -f "dist/public/index.html" && echo "✅ index.html present" &&     ls -la dist/public/ &&     echo "✅ Static assets verified for Railway"  ✔ 97 ms
+
+[10/10] RUN npm ci --only=production --no-audit --no-fund &&     npm cache clean --force
+
+npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@isaacs/balanced-match@4.0.1',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@isaacs/brace-expansion@5.0.0',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'glob@11.0.3',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'jackspeak@4.1.1',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'minimatch@10.0.3',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'path-scurry@2.0.0',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'lru-cache@11.1.0',
+npm warn EBADENGINE   required: { node: '20 || >=22' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+
+added 498 packages in 9s
+
+npm warn using --force Recommended protections disabled.
+
+[10/10] RUN npm ci --only=production --no-audit --no-fund &&     npm cache clean --force  ✔ 9 sec.
+
+exporting to docker image format
+
+exporting to image
+
+importing to docker
+
+[auth] sharing credentials for production-asia-southeast1-eqsg3a.railway-registry.com
+
+[auth] sharing credentials for production-asia-southeast1-eqsg3a.railway-registry.com  ✔ 0 ms
+
+importing to docker  ✔ 19 sec.
+
+Build time: 58.68 seconds
+
+ 
+
+====================
+
+Starting Healthcheck
+
+====================
+
+
+Path: /health
+
+Retry window: 1m0s
+
+ 
+
+[1/1] Healthcheck succeeded!

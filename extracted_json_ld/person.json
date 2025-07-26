@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Celia Dunsmore",
+  "jobTitle": "Accredited Mental Health Social Worker",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Celia Dunsmore Counselling"
+  },
+  "url": "https://celiadunsmorecounselling.com.au/about",
+  "sameAs": []
+}

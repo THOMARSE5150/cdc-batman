@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient - very subtle -->
+  <defs>
+    <linearGradient id="bgGradient" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F9FDFC" />
+      <stop offset="100%" stop-color="#E6F7F4" />
+    </linearGradient>
+    
+    <!-- Soft blur filter -->
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="600" height="400" rx="20" fill="url(#bgGradient)" />
+  
+  <!-- Abstract concentric circles - representing ripples of calm -->
+  <circle cx="300" cy="200" r="150" stroke="#7BBEAD" stroke-opacity="0.05" stroke-width="1" />
+  <circle cx="300" cy="200" r="130" stroke="#7BBEAD" stroke-opacity="0.07" stroke-width="1" />
+  <circle cx="300" cy="200" r="110" stroke="#7BBEAD" stroke-opacity="0.09" stroke-width="1" />
+  <circle cx="300" cy="200" r="90" stroke="#7BBEAD" stroke-opacity="0.11" stroke-width="1" />
+  <circle cx="300" cy="200" r="70" stroke="#7BBEAD" stroke-opacity="0.13" stroke-width="1" />
+  <circle cx="300" cy="200" r="50" stroke="#7BBEAD" stroke-opacity="0.15" stroke-width="1" />
+  <circle cx="300" cy="200" r="30" stroke="#7BBEAD" stroke-opacity="0.17" stroke-width="1" />
+  <circle cx="300" cy="200" r="10" fill="#7BBEAD" fill-opacity="0.19" />
+  
+  <!-- Overlapping translucent circles - balance and harmony -->
+  <circle cx="200" cy="150" r="80" fill="#5B9D8A" fill-opacity="0.05" />
+  <circle cx="400" cy="150" r="80" fill="#5B9D8A" fill-opacity="0.05" />
+  <circle cx="300" cy="250" r="80" fill="#5B9D8A" fill-opacity="0.05" />
+  
+  <!-- Subtle blurred elements -->
+  <circle cx="200" cy="150" r="50" fill="#8ED1BD" fill-opacity="0.1" filter="url(#softBlur)" />
+  <circle cx="400" cy="150" r="50" fill="#8ED1BD" fill-opacity="0.1" filter="url(#softBlur)" />
+  <circle cx="300" cy="250" r="50" fill="#8ED1BD" fill-opacity="0.1" filter="url(#softBlur)" />
+  
+  <!-- Intersection points with small golden dots -->
+  <circle cx="250" cy="150" r="4" fill="#F3C98B" fill-opacity="0.3" />
+  <circle cx="350" cy="150" r="4" fill="#F3C98B" fill-opacity="0.3" />
+  <circle cx="250" cy="200" r="4" fill="#F3C98B" fill-opacity="0.3" />
+  <circle cx="350" cy="200" r="4" fill="#F3C98B" fill-opacity="0.3" />
+  <circle cx="300" cy="200" r="4" fill="#F3C98B" fill-opacity="0.3" />
+  
+  <!-- Subtle connecting lines -->
+  <line x1="250" y1="150" x2="350" y2="150" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="0.5" />
+  <line x1="250" y1="200" x2="350" y2="200" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="0.5" />
+  <line x1="250" y1="150" x2="250" y2="200" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="0.5" />
+  <line x1="350" y1="150" x2="350" y2="200" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="0.5" />
+  <line x1="300" y1="200" x2="250" y2="150" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="0.5" />
+  <line x1="300" y1="200" x2="350" y2="150" stroke="#5B9D8A" stroke-opacity="0.1" stroke-width="0.5" />
+  
+  <!-- Delicate horizontal lines for structure -->
+  <line x1="100" y1="120" x2="500" y2="120" stroke="#5B9D8A" stroke-opacity="0.05" stroke-width="0.5" />
+  <line x1="100" y1="280" x2="500" y2="280" stroke="#5B9D8A" stroke-opacity="0.05" stroke-width="0.5" />
+  
+  <!-- Soft arcs - representing growth and movement -->
+  <path d="M200 300C240 280 280 270 300 270C320 270 360 280 400 300" stroke="#7BBEAD" stroke-opacity="0.15" stroke-width="1" fill="none" />
+  <path d="M220 320C250 300 280 290 300 290C320 290 350 300 380 320" stroke="#7BBEAD" stroke-opacity="0.15" stroke-width="1" fill="none" />
+  <path d="M240 340C260 320 280 310 300 310C320 310 340 320 360 340" stroke="#7BBEAD" stroke-opacity="0.15" stroke-width="1" fill="none" />
+  
+  <!-- Abstract elements suggesting movement -->
+  <path d="M150 170C160 160 170 165 180 155C170 165 160 170 150 170Z" fill="#5B9D8A" fill-opacity="0.2" />
+  <path d="M450 170C440 160 430 165 420 155C430 165 440 170 450 170Z" fill="#5B9D8A" fill-opacity="0.2" />
+  <path d="M300 120C310 110 320 115 330 105C320 115 310 120 300 120Z" fill="#5B9D8A" fill-opacity="0.2" />
+  <path d="M300 280C290 270 280 275 270 265C280 275 290 280 300 280Z" fill="#5B9D8A" fill-opacity="0.2" />
+  
+  <!-- Very subtle radial gradient overlay -->
+  <circle cx="300" cy="200" r="180" fill="url(#radialGlow)" fill-opacity="0.05" />
+  
+  <defs>
+    <radialGradient id="radialGlow" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#F3C98B" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#F3C98B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

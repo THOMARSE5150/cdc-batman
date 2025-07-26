@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient - soft sunrise colors -->
+  <defs>
+    <linearGradient id="skyGradient" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E6F7F4" /> <!-- Soft blue-green -->
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    
+    <!-- Dappled light filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    </filter>
+    
+    <!-- Texture pattern for path -->
+    <pattern id="pathTexture" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#E2D8C6" fill-opacity="0.1" />
+      <rect width="5" height="5" fill="#D4C3A9" fill-opacity="0.1" />
+    </pattern>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="600" height="400" rx="20" fill="url(#skyGradient)" />
+  
+  <!-- Distant hills/mountains - layered for depth -->
+  <path d="M0 200C50 180 100 190 150 170C200 150 250 160 300 140C350 160 400 150 450 170C500 190 550 180 600 200V400H0V200Z" fill="#97BDB1" fill-opacity="0.3" />
+  <path d="M0 220C60 200 120 210 180 190C240 170 300 180 360 160C420 180 480 170 540 190C600 210 600 220 600 220V400H0V220Z" fill="#7BBEAD" fill-opacity="0.2" />
+  <path d="M0 250C50 240 100 245 150 235C200 225 250 235 300 220C350 235 400 225 450 235C500 245 550 240 600 250V400H0V250Z" fill="#5B9D8A" fill-opacity="0.15" />
+  
+  <!-- Forest backdrop - tree silhouettes -->
+  <!-- Left side trees -->
+  <path d="M50 270C50 270 40 200 70 190C100 180 110 200 100 220C90 240 80 250 50 270Z" fill="#5B9D8A" fill-opacity="0.4" />
+  <path d="M100 260C100 260 90 210 110 190C130 170 150 190 140 220C130 250 120 240 100 260Z" fill="#5B9D8A" fill-opacity="0.5" />
+  <path d="M150 250C150 250 140 180 170 170C200 160 210 190 190 210C170 230 170 230 150 250Z" fill="#6BAC9A" fill-opacity="0.4" />
+  
+  <!-- Right side trees -->
+  <path d="M550 270C550 270 560 200 530 190C500 180 490 200 500 220C510 240 520 250 550 270Z" fill="#5B9D8A" fill-opacity="0.4" />
+  <path d="M500 260C500 260 510 210 490 190C470 170 450 190 460 220C470 250 480 240 500 260Z" fill="#5B9D8A" fill-opacity="0.5" />
+  <path d="M450 250C450 250 460 180 430 170C400 160 390 190 410 210C430 230 430 230 450 250Z" fill="#6BAC9A" fill-opacity="0.4" />
+  
+  <!-- Main walking path -->
+  <path d="M250 400C250 370 270 340 300 310C330 280 350 250 300 230C250 210 230 230 240 250" stroke="#D4C3A9" stroke-width="40" stroke-opacity="0.2" stroke-linecap="round" />
+  <path d="M250 400C250 370 270 340 300 310C330 280 350 250 300 230C250 210 230 230 240 250" stroke="#E2D8C6" stroke-width="30" stroke-opacity="0.3" stroke-linecap="round" />
+  <path d="M250 400C250 370 270 340 300 310C330 280 350 250 300 230C250 210 230 230 240 250" stroke="url(#pathTexture)" stroke-width="20" stroke-opacity="0.4" stroke-linecap="round" />
+  
+  <!-- Dappled light through trees - soft glowing spots -->
+  <circle cx="150" cy="100" r="15" fill="#F3C98B" fill-opacity="0.3" filter="url(#softGlow)" />
+  <circle cx="280" cy="80" r="25" fill="#F3C98B" fill-opacity="0.2" filter="url(#softGlow)" />
+  <circle cx="350" cy="120" r="20" fill="#F3C98B" fill-opacity="0.25" filter="url(#softGlow)" />
+  <circle cx="450" cy="90" r="18" fill="#F3C98B" fill-opacity="0.2" filter="url(#softGlow)" />
+  <circle cx="520" cy="150" r="12" fill="#F3C98B" fill-opacity="0.15" filter="url(#softGlow)" />
+  
+  <circle cx="200" cy="180" r="10" fill="#F3C98B" fill-opacity="0.2" filter="url(#softGlow)" />
+  <circle cx="320" cy="220" r="15" fill="#F3C98B" fill-opacity="0.3" filter="url(#softGlow)" />
+  <circle cx="400" cy="190" r="12" fill="#F3C98B" fill-opacity="0.25" filter="url(#softGlow)" />
+  <circle cx="230" cy="280" r="8" fill="#F3C98B" fill-opacity="0.2" filter="url(#softGlow)" />
+  <circle cx="360" cy="250" r="10" fill="#F3C98B" fill-opacity="0.15" filter="url(#softGlow)" />
+  
+  <!-- Small trees and foliage along the path -->
+  <!-- Left side of path -->
+  <path d="M220 320C220 320 215 290 230 285C245 280 250 295 245 305C240 315 235 315 220 320Z" fill="#6BAC9A" fill-opacity="0.6" />
+  <path d="M200 350C200 350 195 320 210 315C225 310 230 325 225 335C220 345 215 345 200 350Z" fill="#6BAC9A" fill-opacity="0.5" />
+  <path d="M230 280C230 280 225 260 235 255C245 250 255 260 250 270C245 280 240 275 230 280Z" fill="#8ED1BD" fill-opacity="0.4" />
+  
+  <!-- Right side of path -->
+  <path d="M380 320C380 320 385 290 370 285C355 280 350 295 355 305C360 315 365 315 380 320Z" fill="#6BAC9A" fill-opacity="0.6" />
+  <path d="M400 350C400 350 405 320 390 315C375 310 370 325 375 335C380 345 385 345 400 350Z" fill="#6BAC9A" fill-opacity="0.5" />
+  <path d="M370 280C370 280 375 260 365 255C355 250 345 260 350 270C355 280 360 275 370 280Z" fill="#8ED1BD" fill-opacity="0.4" />
+  
+  <!-- Healing symbols: flowers, butterflies, gentle elements -->
+  <!-- Small flowers -->
+  <circle cx="230" cy="290" r="3" fill="#F3C98B" fill-opacity="0.8" />
+  <circle cx="226" cy="288" r="2" fill="#F3C98B" fill-opacity="0.7" />
+  <circle cx="234" cy="288" r="2" fill="#F3C98B" fill-opacity="0.7" />
+  <circle cx="226" cy="292" r="2" fill="#F3C98B" fill-opacity="0.7" />
+  <circle cx="234" cy="292" r="2" fill="#F3C98B" fill-opacity="0.7" />
+  
+  <circle cx="370" cy="290" r="3" fill="#E57373" fill-opacity="0.4" />
+  <circle cx="366" cy="288" r="2" fill="#E57373" fill-opacity="0.3" />
+  <circle cx="374" cy="288" r="2" fill="#E57373" fill-opacity="0.3" />
+  <circle cx="366" cy="292" r="2" fill="#E57373" fill-opacity="0.3" />
+  <circle cx="374" cy="292" r="2" fill="#E57373" fill-opacity="0.3" />
+  
+  <circle cx="320" cy="330" r="3" fill="#A7C7E7" fill-opacity="0.5" />
+  <circle cx="316" cy="328" r="2" fill="#A7C7E7" fill-opacity="0.4" />
+  <circle cx="324" cy="328" r="2" fill="#A7C7E7" fill-opacity="0.4" />
+  <circle cx="316" cy="332" r="2" fill="#A7C7E7" fill-opacity="0.4" />
+  <circle cx="324" cy="332" r="2" fill="#A7C7E7" fill-opacity="0.4" />
+  
+  <!-- Butterflies - simple, abstract shapes -->
+  <path d="M250 240C252 238 254 238 256 240C254 238 252 236 250 234C248 236 246 238 244 240C246 238 248 238 250 240Z" fill="#8ED1BD" fill-opacity="0.6" />
+  <path d="M350 200C352 198 354 198 356 200C354 198 352 196 350 194C348 196 346 198 344 200C346 198 348 198 350 200Z" fill="#A7C7E7" fill-opacity="0.5" />
+  <path d="M280 180C283 177 286 177 289 180C286 177 283 174 280 171C277 174 274 177 271 180C274 177 277 177 280 180Z" fill="#F3C98B" fill-opacity="0.4" />
+  
+  <!-- Small leaves -->
+  <path d="M210 270C215 265 220 267 225 265C220 267 215 270 210 270Z" fill="#8ED1BD" fill-opacity="0.7" />
+  <path d="M390 270C385 265 380 267 375 265C380 267 385 270 390 270Z" fill="#8ED1BD" fill-opacity="0.7" />
+  <path d="M270 300C275 295 280 297 285 295C280 297 275 300 270 300Z" fill="#6BAC9A" fill-opacity="0.6" />
+  <path d="M330 300C325 295 320 297 315 295C320 297 325 300 330 300Z" fill="#6BAC9A" fill-opacity="0.6" />
+  
+  <!-- Small flowing stream/water element -->
+  <path d="M310 360C330 355 350 365 370 360C350 365 330 375 310 370C290 365 270 375 250 370C270 375 290 365 310 360Z" stroke="#A7C7E7" stroke-opacity="0.3" stroke-width="1" />
+  <path d="M310 370C330 365 350 375 370 370C350 375 330 385 310 380C290 375 270 385 250 380C270 385 290 375 310 370Z" stroke="#A7C7E7" stroke-opacity="0.2" stroke-width="1" />
+</svg>

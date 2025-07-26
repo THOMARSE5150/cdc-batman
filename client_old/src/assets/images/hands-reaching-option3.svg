@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradients with website's color scheme -->
+  <defs>
+    <linearGradient id="bgGradient" x1="300" y1="0" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ECFEFF" /> <!-- Very light teal -->
+      <stop offset="100%" stop-color="#F0F7F7" /> <!-- Light background -->
+    </linearGradient>
+    <linearGradient id="handLight" x1="250" y1="180" x2="250" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8E3DD" /> <!-- Light skin tone -->
+      <stop offset="100%" stop-color="#F5D0C5" /> <!-- Slightly darker skin tone -->
+    </linearGradient>
+    <linearGradient id="handDark" x1="350" y1="180" x2="350" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A6852" /> <!-- Dark skin tone -->
+      <stop offset="100%" stop-color="#6D5243" /> <!-- Slightly darker skin tone -->
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="1" dy="1" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="foliageGradient1" x1="0" y1="50" x2="200" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B2AA" stop-opacity="0.1" /> <!-- Primary teal with transparency -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.3" /> <!-- Primary teal more solid -->
+    </linearGradient>
+    <linearGradient id="foliageGradient2" x1="600" y1="50" x2="400" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B2AA" stop-opacity="0.1" /> <!-- Primary teal with transparency -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.3" /> <!-- Primary teal more solid -->
+    </linearGradient>
+    <linearGradient id="groundGradient" x1="300" y1="280" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DBEEE5" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#DBEEE5" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" rx="20" fill="url(#bgGradient)" />
+  
+  <!-- Modern geometric abstractions in the background -->
+  <path d="M0 100 Q150 150 300 80 Q450 10 600 100 L600 400 L0 400 Z" fill="url(#foliageGradient1)" opacity="0.3" />
+  <path d="M600 150 Q450 200 300 130 Q150 60 0 150 L0 400 L600 400 Z" fill="url(#foliageGradient2)" opacity="0.3" />
+  
+  <!-- Modern abstract trees/leaves (minimalist style) -->
+  <g>
+    <!-- Left side stylized leaves -->
+    <g transform="translate(50, 50)">
+      <path d="M0 30 C10 0 40 0 50 30 C60 60 30 60 20 30 Z" fill="#20B2AA" opacity="0.15" />
+      <path d="M20 30 L30 0" stroke="#20B2AA" stroke-width="0.7" opacity="0.2" />
+    </g>
+    <g transform="translate(100, 70)">
+      <path d="M0 30 C10 0 40 0 50 30 C60 60 30 60 20 30 Z" fill="#20B2AA" opacity="0.15" />
+      <path d="M20 30 L30 0" stroke="#20B2AA" stroke-width="0.7" opacity="0.2" />
+    </g>
+    <g transform="translate(150, 40)">
+      <path d="M0 30 C10 0 40 0 50 30 C60 60 30 60 20 30 Z" fill="#20B2AA" opacity="0.15" />
+      <path d="M20 30 L30 0" stroke="#20B2AA" stroke-width="0.7" opacity="0.2" />
+    </g>
+    
+    <!-- Right side stylized leaves -->
+    <g transform="translate(500, 50)">
+      <path d="M0 30 C10 0 40 0 50 30 C60 60 30 60 20 30 Z" fill="#F87171" opacity="0.10" />
+      <path d="M20 30 L30 0" stroke="#F87171" stroke-width="0.7" opacity="0.15" />
+    </g>
+    <g transform="translate(450, 70)">
+      <path d="M0 30 C10 0 40 0 50 30 C60 60 30 60 20 30 Z" fill="#F87171" opacity="0.10" />
+      <path d="M20 30 L30 0" stroke="#F87171" stroke-width="0.7" opacity="0.15" />
+    </g>
+    <g transform="translate(400, 40)">
+      <path d="M0 30 C10 0 40 0 50 30 C60 60 30 60 20 30 Z" fill="#F87171" opacity="0.10" />
+      <path d="M20 30 L30 0" stroke="#F87171" stroke-width="0.7" opacity="0.15" />
+    </g>
+  </g>
+  
+  <!-- Ground plane with modern gradient -->
+  <rect x="0" y="280" width="600" height="120" fill="url(#groundGradient)" />
+  
+  <!-- Abstract undulating lines representing ground texture -->
+  <path d="M0 320 C150 310 300 330 450 310 C500 305 550 310 600 320" stroke="#20B2AA" stroke-opacity="0.2" stroke-width="0.8" fill="none" />
+  <path d="M0 340 C100 350 200 330 300 350 C400 370 500 350 600 360" stroke="#20B2AA" stroke-opacity="0.2" stroke-width="0.8" fill="none" />
+  <path d="M0 360 C150 350 300 370 450 350 C500 345 550 350 600 360" stroke="#20B2AA" stroke-opacity="0.2" stroke-width="0.8" fill="none" />
+  <path d="M0 380 C100 390 200 370 300 390 C400 410 500 390 600 400" stroke="#20B2AA" stroke-opacity="0.2" stroke-width="0.8" fill="none" />
+  
+  <!-- Minimalistic geometric light source in the background -->
+  <circle cx="300" cy="100" r="50" fill="#FFEDD5" opacity="0.2" />
+  <circle cx="300" cy="100" r="35" fill="#FFEDD5" opacity="0.15" />
+  <circle cx="300" cy="100" r="20" fill="#FFEDD5" opacity="0.1" />
+  
+  <!-- Geometric light rays -->
+  <line x1="300" y1="100" x2="300" y2="200" stroke="#FFEDD5" stroke-opacity="0.15" stroke-width="1" />
+  <line x1="300" y1="100" x2="250" y2="200" stroke="#FFEDD5" stroke-opacity="0.15" stroke-width="0.8" />
+  <line x1="300" y1="100" x2="350" y2="200" stroke="#FFEDD5" stroke-opacity="0.15" stroke-width="0.8" />
+  <line x1="300" y1="100" x2="220" y2="180" stroke="#FFEDD5" stroke-opacity="0.15" stroke-width="0.6" />
+  <line x1="300" y1="100" x2="380" y2="180" stroke="#FFEDD5" stroke-opacity="0.15" stroke-width="0.6" />
+  
+  <!-- Elegant hands reaching out with modern simplified style -->
+  <!-- Light hand (left) with cleaner lines -->
+  <g filter="url(#softShadow)">
+    <path d="M200 250 C220 230 240 215 250 210 C255 207 260 205 262 206 C264 207 263 212 260 215 C255 220 250 225 247 230 C245 232 243 234 245 236 C247 238 250 235 252 232" stroke="#F8E3DD" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M252 232 C250 236 248 238 250 240 C252 242 255 239 257 236" stroke="#F8E3DD" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M257 236 C255 240 253 242 255 244 C257 246 260 243 260 240" stroke="#F8E3DD" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M235 245 L215 250" stroke="#F8E3DD" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M200 250 C230 270 260 280 290 260" stroke="url(#handLight)" stroke-width="30" stroke-linecap="round" />
+  </g>
+  
+  <!-- Dark hand (right) with cleaner lines -->
+  <g filter="url(#softShadow)">
+    <path d="M400 250 C380 230 360 215 350 210 C345 207 340 205 338 206 C336 207 337 212 340 215 C345 220 350 225 353 230 C355 232 357 234 355 236 C353 238 350 235 348 232" stroke="#8A6852" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M348 232 C350 236 352 238 350 240 C348 242 345 239 343 236" stroke="#8A6852" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M343 236 C345 240 347 242 345 244 C343 246 340 243 340 240" stroke="#8A6852" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M365 245 L385 250" stroke="#8A6852" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M400 250 C370 270 340 280 310 260" stroke="url(#handDark)" stroke-width="30" stroke-linecap="round" />
+  </g>
+  
+  <!-- Central connection point with modern glow effect -->
+  <circle cx="300" cy="260" r="15" fill="#FFFFFF" opacity="0.6" />
+  <circle cx="300" cy="260" r="10" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="300" cy="260" r="5" fill="#FFFFFF" />
+  
+  <!-- Abstract energy flow between hands - modern geometric style -->
+  <path d="M280 250 C285 254 290 257 295 260 C300 263 305 266 310 270" stroke="#20B2AA" stroke-opacity="0.4" stroke-width="0.8" stroke-dasharray="2 3" />
+  <path d="M290 240 C295 244 300 247 305 250 C310 253 315 256 320 260" stroke="#20B2AA" stroke-opacity="0.4" stroke-width="0.8" stroke-dasharray="2 3" />
+  <path d="M320 250 C315 254 310 257 305 260 C300 263 295 266 290 270" stroke="#F87171" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="2 3" />
+  <path d="M310 240 C305 244 300 247 295 250 C290 253 285 256 280 260" stroke="#F87171" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="2 3" />
+  
+  <!-- Small abstract elements in foreground for scale and interest -->
+  <g transform="translate(230, 330)">
+    <path d="M0 0 L0 10" stroke="#20B2AA" stroke-width="0.8" opacity="0.6" />
+    <path d="M-2 2 L2 2" stroke="#20B2AA" stroke-width="0.8" opacity="0.6" />
+  </g>
+  <g transform="translate(250, 310)">
+    <path d="M0 0 L0 15" stroke="#20B2AA" stroke-width="0.8" opacity="0.5" />
+    <path d="M-3 3 L3 3" stroke="#20B2AA" stroke-width="0.8" opacity="0.5" />
+  </g>
+  <g transform="translate(350, 330)">
+    <path d="M0 0 L0 10" stroke="#F87171" stroke-width="0.8" opacity="0.4" />
+    <path d="M-2 2 L2 2" stroke="#F87171" stroke-width="0.8" opacity="0.4" />
+  </g>
+  <g transform="translate(370, 310)">
+    <path d="M0 0 L0 15" stroke="#F87171" stroke-width="0.8" opacity="0.3" />
+    <path d="M-3 3 L3 3" stroke="#F87171" stroke-width="0.8" opacity="0.3" />
+  </g>
+</svg>

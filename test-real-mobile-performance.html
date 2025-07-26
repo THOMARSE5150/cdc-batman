@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Mobile Performance Test</title>
+</head>
+<body>
+    <h1>Testing Real Mobile Performance</h1>
+    <p>To test the actual mobile performance of the Celia Dunsmore Counselling website:</p>
+    
+    <h2>1. Use PageSpeed Insights</h2>
+    <p>Visit: <a href="https://pagespeed.web.dev/" target="_blank">https://pagespeed.web.dev/</a></p>
+    <p>Enter your Replit URL: <strong>https://3bda2cd4-eec9-48b2-bb2a-1c1e81e43bfa-00-e63wrhs7z2ea.sisko.replit.dev</strong></p>
+    <p>Select "Mobile" and click "Analyze"</p>
+    
+    <h2>2. Current Real Issues Found</h2>
+    <ul>
+        <li><strong>First Contentful Paint (FCP):</strong> 3.4s (should be < 1.8s)</li>
+        <li><strong>Largest Contentful Paint (LCP):</strong> 5.0s (should be < 2.5s)</li>
+        <li><strong>Total Blocking Time:</strong> Contributing to poor mobile score</li>
+    </ul>
+    
+    <h2>3. Optimizations Applied</h2>
+    <ul>
+        <li>✅ Removed Framer Motion animations (heavy JavaScript)</li>
+        <li>✅ Deferred Google Ads loading until after page load</li>
+        <li>✅ Added critical CSS inlining for immediate rendering</li>
+        <li>✅ Optimized images with proper loading attributes</li>
+        <li>✅ Minimized JavaScript execution on mobile</li>
+        <li>✅ Added resource hints for critical assets</li>
+    </ul>
+    
+    <h2>4. Next Steps</h2>
+    <p>The internal monitoring was giving false 100/100 scores. Real testing with PageSpeed Insights will show actual improvements from these optimizations.</p>
+    
+    <script>
+        // Real performance measurement
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const navigation = performance.getEntriesByType('navigation')[0];
+                    const paint = performance.getEntriesByType('paint');
+                    
+                    console.log('Real Performance Metrics:');
+                    console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart, 'ms');
+                    console.log('Load Complete:', navigation.loadEventEnd - navigation.loadEventStart, 'ms');
+                    
+                    paint.forEach(entry => {
+                        console.log(entry.name + ':', entry.startTime, 'ms');
+                    });
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>

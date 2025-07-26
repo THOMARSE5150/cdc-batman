@@ -1,0 +1,104 @@
+You reached the start of the range → Jul 10, 2025 at 2:50 AM
+
+vite v5.4.14 building for production...
+
+transforming...
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+✓ 936 modules transformed.
+
+rendering chunks...
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/client/src/assets/images/hero_image_canva_optimized.webp is dynamically imported by /app/client/src/components/ui/PreloadCriticalResources.tsx but also statically imported by /app/client/src/components/sections/HeroSection.tsx, dynamic import will not move module into another chunk.
+
+
+computing gzip size...
+
+../dist/public/index.html                                         5.68 kB │ gzip:   1.95 kB
+../dist/public/assets/hero_image_canva_optimized-BloUw-DB.webp   61.37 kB
+
+../dist/public/assets/Calendar-CjjP807A.css                       3.14 kB │ gzip:   0.79 kB
+
+../dist/public/assets/main-nT60FGoV.css                         197.48 kB │ gzip:  29.71 kB
+
+../dist/public/assets/utils-QRJGL1kX.js                           0.22 kB │ gzip:   0.15 kB
+../dist/public/assets/index-DRAYTNLi.js                           0.69 kB │ gzip:   0.38 kB
+
+../dist/public/assets/Sitemap-C-873CTV.js                         1.02 kB │ gzip:   0.52 kB
+
+../dist/public/assets/Breadcrumb-CZM6jw31.js                      2.37 kB │ gzip:   0.92 kB
+
+../dist/public/assets/PageHeader-DAzlcQB5.js                      3.10 kB │ gzip:   1.04 kB
+../dist/public/assets/index-LlvLiWQ9.js                           3.84 kB │ gzip:   1.52 kB
+../dist/public/assets/not-found-Ck3OAhXv.js                       4.73 kB │ gzip:   1.30 kB
+../dist/public/assets/FAQ-CSpa3Sr1.js                             4.84 kB │ gzip:   1.61 kB
+../dist/public/assets/BookingHelp-Czh_kW7E.js                    10.11 kB │ gzip:   2.23 kB
+
+../dist/public/assets/router-WBuBPcGv.js                         11.10 kB │ gzip:   3.93 kB
+../dist/public/assets/Fees-BjuPTPY8.js                           12.41 kB │ gzip:   2.24 kB
+
+../dist/public/assets/accordion-ajnCJx_8.js                      17.87 kB │ gzip:   3.77 kB
+
+../dist/public/assets/ClientDiversity-Bom_4TMa.js                24.63 kB │ gzip:   3.95 kB
+../dist/public/assets/Locations-D7VLHGUm.js                      28.07 kB │ gzip:   6.14 kB
+../dist/public/assets/Services-7uAHwrhk.js                       29.55 kB │ gzip:   5.15 kB
+../dist/public/assets/MeetCelia-Dnc1VQ6F.js                      42.84 kB │ gzip:   7.08 kB
+
+../dist/public/assets/alert-1m8jW4qz.js                          44.25 kB │ gzip:   8.59 kB
+../dist/public/assets/AdminContacts-DBE2Z-AB.js                  61.98 kB │ gzip:  11.49 kB
+
+../dist/public/assets/card-DpyH9Tj8.js                           93.54 kB │ gzip:  20.28 kB
+
+../dist/public/assets/Calendar-BjFISCMr.js                      147.36 kB │ gzip:  27.57 kB
+
+../dist/public/assets/vendor-CqRIpB34.js                        213.01 kB │ gzip:  53.72 kB
+
+../dist/public/assets/Contact-CekF0P7p.js                       250.12 kB │ gzip:  42.95 kB
+
+../dist/public/assets/main-DNkKFjpz.js                          730.12 kB │ gzip: 151.26 kB
+
+✓ built in 5.31s
+
+✅ React build completed!
+
+🔍 Final verification...
+
+✅ Deployment ready: 8 files
+
+❌ Missing files: [ 'images/header_logo.png' ]
+
+✕ [ 7/11] RUN echo "🔧 Setting file permissions..." &&     find public/images -type f -exec chmod 644 {} + &&     chmod +x ensure-images.js &&     echo "🔍 Pre-build image verification..." &&     node ensure-images.js &&     echo "🚀 Building ACTUAL React application..." &&     node railway-react-build.js &&     echo "✅ React application built successfully" 
+process "/bin/sh -c echo \"🔧 Setting file permissions...\" &&     find public/images -type f -exec chmod 644 {} + &&     chmod +x ensure-images.js &&     echo \"🔍 Pre-build image verification...\" &&     node ensure-images.js &&     echo \"🚀 Building ACTUAL React application...\" &&     node railway-react-build.js &&     echo \"✅ React application built successfully\"" did not complete successfully: exit code: 1
+ 
+
+Dockerfile:21
+
+-------------------
+
+20 |     # Fix file permissions and build actual React application
+
+21 | >>> RUN echo "🔧 Setting file permissions..." && \
+
+22 | >>>     find public/images -type f -exec chmod 644 {} + && \
+
+23 | >>>     chmod +x ensure-images.js && \
+
+24 | >>>     echo "🔍 Pre-build image verification..." && \
+
+25 | >>>     node ensure-images.js && \
+
+26 | >>>     echo "🚀 Building ACTUAL React application..." && \
+
+27 | >>>     node railway-react-build.js && \
+
+28 | >>>     echo "✅ React application built successfully"
+
+29 |
+
+-------------------
+
+ERROR: failed to build: failed to solve: process "/bin/sh -c echo \"🔧 Setting file permissions...\" &&     find public/images -type f -exec chmod 644 {} + &&     chmod +x ensure-images.js &&     echo \"🔍 Pre-build image verification...\" &&     node ensure-images.js &&     echo \"🚀 Building ACTUAL React application...\" &&     node railway-react-build.js &&     echo \"✅ React application built successfully\"" did not complete successfully: exit code: 1

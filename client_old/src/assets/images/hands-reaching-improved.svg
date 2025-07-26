@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradients with website's color scheme -->
+    <linearGradient id="skyGradient" x1="300" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ECFEFF" /> <!-- Very light teal -->
+      <stop offset="100%" stop-color="#FFF7ED" /> <!-- Warm light background -->
+    </linearGradient>
+    
+    <!-- Forest green gradients - using the teal primary color -->
+    <linearGradient id="forestGradient1" x1="0" y1="150" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8ED1BD" stop-opacity="0.7" /> <!-- Light teal -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.5" /> <!-- Primary teal -->
+    </linearGradient>
+    
+    <linearGradient id="forestGradient2" x1="600" y1="150" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8ED1BD" stop-opacity="0.7" /> <!-- Light teal -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.5" /> <!-- Primary teal -->
+    </linearGradient>
+    
+    <!-- Ground gradient -->
+    <linearGradient id="groundGradient" x1="300" y1="250" x2="300" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8ED1BD" stop-opacity="0.3" /> <!-- Light teal -->
+      <stop offset="100%" stop-color="#20B2AA" stop-opacity="0.2" /> <!-- Primary teal -->
+    </linearGradient>
+    
+    <!-- Leaf gradients -->
+    <linearGradient id="leafGradient1" x1="0" y1="0" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8ED1BD" /> <!-- Light teal -->
+      <stop offset="100%" stop-color="#20B2AA" /> <!-- Primary teal -->
+    </linearGradient>
+    
+    <linearGradient id="leafGradient2" x1="0" y1="0" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D1A88E" /> <!-- Light brown -->
+      <stop offset="100%" stop-color="#AA7A5A" /> <!-- Darker brown -->
+    </linearGradient>
+    
+    <!-- Hand colors -->
+    <linearGradient id="lightHandGradient" x1="150" y1="180" x2="250" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8E3DD" /> <!-- Light skin tone -->
+      <stop offset="100%" stop-color="#EFD6CE" /> <!-- Light skin tone shadow -->
+    </linearGradient>
+    
+    <linearGradient id="darkHandGradient" x1="450" y1="180" x2="350" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#70493A" /> <!-- Dark skin tone -->
+      <stop offset="100%" stop-color="#5A3B2E" /> <!-- Dark skin tone shadow -->
+    </linearGradient>
+    
+    <!-- Sun glow -->
+    <radialGradient id="sunGlow" cx="300" cy="100" r="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FED7AA" stop-opacity="0.7" /> <!-- Warm glow -->
+      <stop offset="100%" stop-color="#FFEDD5" stop-opacity="0" /> <!-- Transparent edge -->
+    </radialGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="1" dy="1" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="600" height="400" fill="url(#skyGradient)" />
+  
+  <!-- Sun glow -->
+  <circle cx="300" cy="100" r="80" fill="url(#sunGlow)" />
+  
+  <!-- Forest background - left side -->
+  <path d="M0 150 C50 170 80 160 100 150 C120 140 150 130 200 150 C250 170 270 160 300 150 L300 400 L0 400 Z" fill="url(#forestGradient1)" opacity="0.9" />
+  
+  <!-- Forest background - right side -->
+  <path d="M600 150 C550 170 520 160 500 150 C480 140 450 130 400 150 C350 170 330 160 300 150 L300 400 L600 400 Z" fill="url(#forestGradient2)" opacity="0.9" />
+  
+  <!-- Ground -->
+  <path d="M0 250 C100 240 200 260 300 250 C400 240 500 260 600 250 L600 400 L0 400 Z" fill="url(#groundGradient)" />
+  
+  <!-- Left side tree trunks -->
+  <path d="M80 100 L90 400" stroke="#8A7967" stroke-width="8" stroke-opacity="0.5" />
+  <path d="M150 120 L140 400" stroke="#8A7967" stroke-width="12" stroke-opacity="0.4" />
+  <path d="M40 150 L60 400" stroke="#8A7967" stroke-width="6" stroke-opacity="0.3" />
+  
+  <!-- Right side tree trunks -->
+  <path d="M520 100 L510 400" stroke="#8A7967" stroke-width="8" stroke-opacity="0.5" />
+  <path d="M450 120 L460 400" stroke="#8A7967" stroke-width="12" stroke-opacity="0.4" />
+  <path d="M560 150 L540 400" stroke="#8A7967" stroke-width="6" stroke-opacity="0.3" />
+  
+  <!-- Left side leaves -->
+  <g transform="translate(50, 30)">
+    <path d="M0 0 C10 10 30 10 40 0 C50 -10 40 -30 20 -30 C0 -30 -10 -10 0 0 Z" fill="url(#leafGradient1)" opacity="0.5" />
+  </g>
+  <g transform="translate(100, 20)">
+    <path d="M0 0 C15 15 45 15 60 0 C75 -15 60 -45 30 -45 C0 -45 -15 -15 0 0 Z" fill="url(#leafGradient1)" opacity="0.6" />
+  </g>
+  <g transform="translate(150, 40)">
+    <path d="M0 0 C10 10 30 10 40 0 C50 -10 40 -30 20 -30 C0 -30 -10 -10 0 0 Z" fill="url(#leafGradient1)" opacity="0.4" />
+  </g>
+  <g transform="translate(80, 60)">
+    <path d="M0 0 C10 10 30 10 40 0 C50 -10 40 -30 20 -30 C0 -30 -10 -10 0 0 Z" fill="url(#leafGradient1)" opacity="0.5" />
+  </g>
+  <g transform="translate(120, 70)">
+    <path d="M0 0 C8 8 24 8 32 0 C40 -8 32 -24 16 -24 C0 -24 -8 -8 0 0 Z" fill="url(#leafGradient1)" opacity="0.7" />
+  </g>
+  
+  <!-- Right side leaves -->
+  <g transform="translate(500, 30)">
+    <path d="M0 0 C-10 10 -30 10 -40 0 C-50 -10 -40 -30 -20 -30 C0 -30 10 -10 0 0 Z" fill="url(#leafGradient2)" opacity="0.5" />
+  </g>
+  <g transform="translate(450, 20)">
+    <path d="M0 0 C-15 15 -45 15 -60 0 C-75 -15 -60 -45 -30 -45 C0 -45 15 -15 0 0 Z" fill="url(#leafGradient2)" opacity="0.6" />
+  </g>
+  <g transform="translate(400, 40)">
+    <path d="M0 0 C-10 10 -30 10 -40 0 C-50 -10 -40 -30 -20 -30 C0 -30 10 -10 0 0 Z" fill="url(#leafGradient2)" opacity="0.4" />
+  </g>
+  <g transform="translate(470, 60)">
+    <path d="M0 0 C-10 10 -30 10 -40 0 C-50 -10 -40 -30 -20 -30 C0 -30 10 -10 0 0 Z" fill="url(#leafGradient2)" opacity="0.5" />
+  </g>
+  <g transform="translate(430, 70)">
+    <path d="M0 0 C-8 8 -24 8 -32 0 C-40 -8 -32 -24 -16 -24 C0 -24 8 -8 0 0 Z" fill="url(#leafGradient2)" opacity="0.7" />
+  </g>
+  
+  <!-- Grass in foreground -->
+  <g transform="translate(0, 300)">
+    <path d="M10 0 L15 -20 L20 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M30 0 L40 -30 L50 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M60 0 L65 -15 L70 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M80 0 L90 -25 L100 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M120 0 L125 -15 L130 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M160 0 L165 -20 L170 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M200 0 L210 -30 L220 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M250 0 L255 -15 L260 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+  </g>
+  
+  <g transform="translate(300, 300)">
+    <path d="M10 0 L15 -20 L20 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M30 0 L40 -30 L50 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M60 0 L65 -15 L70 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M80 0 L90 -25 L100 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M120 0 L125 -15 L130 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M160 0 L165 -20 L170 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M200 0 L210 -30 L220 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M250 0 L255 -15 L260 0" stroke="#20B2AA" stroke-width="1" stroke-opacity="0.7" />
+  </g>
+  
+  <!-- Detailed light hand (left) - Using realistic hand shape based on original image -->
+  <g filter="url(#softShadow)">
+    <path d="M170 230 
+             C180 225 190 215 195 205 
+             C198 200 200 195 202 190 
+             L205 187 
+             C207 190 208 193 207 197 
+             C205 205 200 215 195 220 
+             C190 225 185 228 180 230 
+             Z" 
+          fill="url(#lightHandGradient)" />
+    
+    <!-- Palm and fingers -->
+    <path d="M180 230 
+             C200 225 215 215 225 200 
+             C235 190 245 180 250 175 
+             C260 170 265 180 260 185 
+             C255 190 250 195 245 200 
+             C240 205 235 210 230 215 
+             C225 220 220 225 215 227 
+             C210 229 200 230 195 230 
+             Z" 
+          fill="url(#lightHandGradient)" />
+    
+    <!-- Thumb -->
+    <path d="M170 230 
+             C175 228 180 225 185 220 
+             C190 215 195 210 198 200 
+             C200 195 200 190 198 187 
+             C195 183 190 185 187 187 
+             C183 190 180 195 177 200 
+             C175 205 172 210 170 215 
+             C168 220 167 225 168 230 
+             Z" 
+          fill="url(#lightHandGradient)" />
+          
+    <!-- Finger details -->
+    <path d="M230 202 L225 210" stroke="#EFD6CE" stroke-width="1" />
+    <path d="M240 195 L235 203" stroke="#EFD6CE" stroke-width="1" />
+    <path d="M250 185 L245 195" stroke="#EFD6CE" stroke-width="1" />
+    
+    <!-- Palm lines -->
+    <path d="M180 230 C190 225 200 220 205 215" stroke="#EFD6CE" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M185 225 C195 220 205 215 210 205" stroke="#EFD6CE" stroke-width="1" stroke-opacity="0.7" />
+  </g>
+  
+  <!-- Detailed dark hand (right) - Using realistic hand shape based on original image -->
+  <g filter="url(#softShadow)">
+    <path d="M430 230 
+             C420 225 410 215 405 205 
+             C402 200 400 195 398 190 
+             L395 187 
+             C393 190 392 193 393 197 
+             C395 205 400 215 405 220 
+             C410 225 415 228 420 230 
+             Z" 
+          fill="url(#darkHandGradient)" />
+    
+    <!-- Palm and fingers -->
+    <path d="M420 230 
+             C400 225 385 215 375 200 
+             C365 190 355 180 350 175 
+             C340 170 335 180 340 185 
+             C345 190 350 195 355 200 
+             C360 205 365 210 370 215 
+             C375 220 380 225 385 227 
+             C390 229 400 230 405 230 
+             Z" 
+          fill="url(#darkHandGradient)" />
+    
+    <!-- Thumb -->
+    <path d="M430 230 
+             C425 228 420 225 415 220 
+             C410 215 405 210 402 200 
+             C400 195 400 190 402 187 
+             C405 183 410 185 413 187 
+             C417 190 420 195 423 200 
+             C425 205 428 210 430 215 
+             C432 220 433 225 432 230 
+             Z" 
+          fill="url(#darkHandGradient)" />
+          
+    <!-- Finger details -->
+    <path d="M370 202 L375 210" stroke="#5A3B2E" stroke-width="1" />
+    <path d="M360 195 L365 203" stroke="#5A3B2E" stroke-width="1" />
+    <path d="M350 185 L355 195" stroke="#5A3B2E" stroke-width="1" />
+    
+    <!-- Palm lines -->
+    <path d="M420 230 C410 225 400 220 395 215" stroke="#5A3B2E" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M415 225 C405 220 395 215 390 205" stroke="#5A3B2E" stroke-width="1" stroke-opacity="0.7" />
+  </g>
+  
+  <!-- Hands touching with subtle highlight -->
+  <circle cx="300" cy="200" r="8" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="300" cy="200" r="4" fill="#FFFFFF" />
+  
+  <!-- Subtle light rays from above -->
+  <line x1="300" y1="100" x2="300" y2="180" stroke="#FED7AA" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="300" y1="100" x2="280" y2="185" stroke="#FED7AA" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="300" y1="100" x2="320" y2="185" stroke="#FED7AA" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="300" y1="100" x2="260" y2="175" stroke="#FED7AA" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="300" y1="100" x2="340" y2="175" stroke="#FED7AA" stroke-width="1" stroke-opacity="0.3" />
+</svg>

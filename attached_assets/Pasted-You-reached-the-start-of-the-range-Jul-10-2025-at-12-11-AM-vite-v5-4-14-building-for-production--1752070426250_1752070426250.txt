@@ -1,0 +1,111 @@
+You reached the start of the range → Jul 10, 2025 at 12:11 AM
+
+vite v5.4.14 building for production...
+
+transforming...
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+✓ 2476 modules transformed.
+
+rendering chunks...
+
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /app/client/src/assets/images/hero_image_canva_optimized.webp is dynamically imported by /app/client/src/components/ui/PreloadCriticalResources.tsx but also statically imported by /app/client/src/components/sections/HeroSection.tsx, dynamic import will not move module into another chunk.
+
+
+computing gzip size...
+
+dist/public/index.html                                         5.64 kB │ gzip:   1.92 kB
+dist/public/assets/hero_image_canva_optimized-BloUw-DB.webp   61.37 kB
+dist/public/assets/Calendar-DDKpoaqD.css                       2.75 kB │ gzip:   0.75 kB
+
+dist/public/assets/main-BeVSTTrD.css                         162.26 kB │ gzip:  25.20 kB
+
+dist/public/assets/circle-BkwkSJOA.js                          0.29 kB │ gzip:   0.24 kB
+dist/public/assets/arrow-left-D5hE024h.js                      0.33 kB │ gzip:   0.26 kB
+
+dist/public/assets/search-BZnaeZnM.js                          0.34 kB │ gzip:   0.27 kB
+
+dist/public/assets/user-round-Snzk4R_g.js                      0.34 kB │ gzip:   0.28 kB
+
+dist/public/assets/user-DLnEr6y3.js                            0.36 kB │ gzip:   0.28 kB
+
+dist/public/assets/message-square-AC48QlIl.js                  0.43 kB │ gzip:   0.32 kB
+
+dist/public/assets/house-BkTopuya.js                           0.46 kB │ gzip:   0.32 kB
+
+dist/public/assets/index-BFKzcyuQ.js                           0.56 kB │ gzip:   0.41 kB
+
+dist/public/assets/Sitemap-C7fjejbR.js                         0.59 kB │ gzip:   0.39 kB
+
+dist/public/assets/Breadcrumb-p3fz2DkF.js                      1.07 kB │ gzip:   0.59 kB
+
+dist/public/assets/PageHeader-BfYUBWHN.js                      1.97 kB │ gzip:   0.92 kB
+
+dist/public/assets/index-Nx7oulid.js                           2.16 kB │ gzip:   1.15 kB
+
+dist/public/assets/not-found-BBeS3RZm.js                       2.48 kB │ gzip:   1.03 kB
+
+dist/public/assets/FAQ-Bd9CK-kd.js                             2.83 kB │ gzip:   1.28 kB
+dist/public/assets/BookingHelp-ChdrdBUE.js                     5.91 kB │ gzip:   2.01 kB
+
+dist/public/assets/accordion-CZ9BSFNG.js                       6.55 kB │ gzip:   2.42 kB
+
+dist/public/assets/Fees-qJRYw163.js                            6.82 kB │ gzip:   1.86 kB
+
+dist/public/assets/ClientDiversity-DZcru2Gc.js                14.85 kB │ gzip:   3.40 kB
+
+dist/public/assets/Locations-CrEaKp_x.js                      14.92 kB │ gzip:   4.91 kB
+
+dist/public/assets/Services-zvBypO5l.js                       17.51 kB │ gzip:   4.42 kB
+
+dist/public/assets/alert-CXmSNd1d.js                          22.03 kB │ gzip:   6.50 kB
+
+dist/public/assets/MeetCelia-oD1sZj7A.js                      28.18 kB │ gzip:   6.66 kB
+
+dist/public/assets/AdminContacts-ClI4P0rK.js                  32.03 kB │ gzip:   8.83 kB
+
+dist/public/assets/card-uhXGhIxv.js                           38.87 kB │ gzip:  13.41 kB
+dist/public/assets/Calendar-4wkfeHlK.js                       68.32 kB │ gzip:  20.17 kB
+
+dist/public/assets/Contact-aCsJ_BSZ.js                       117.50 kB │ gzip:  30.78 kB
+dist/public/assets/main-8RH0xqrR.js                          488.72 kB │ gzip: 151.46 kB
+
+✓ built in 6.20s
+
+✅ Build completed
+
+total 12
+
+drwxr-xr-x    3 root     root          4096 Jul  9 14:11 .
+drwxr-xr-x    3 root     root          4096 Jul  9 14:11 ..
+drwxr-xr-x    2 root     root          4096 Jul  9 14:11 images
+
+❌ Build failed - no index.html
+
+✕ [builder 7/7] RUN npm run build &&     echo "✅ Build completed" &&     ls -la dist/public/ &&     test -f "dist/public/index.html" || (echo "❌ Build failed - no index.html" && exit 1) 
+process "/bin/sh -c npm run build &&     echo \"✅ Build completed\" &&     ls -la dist/public/ &&     test -f \"dist/public/index.html\" || (echo \"❌ Build failed - no index.html\" && exit 1)" did not complete successfully: exit code: 1
+ 
+
+Dockerfile:21
+
+-------------------
+
+20 |     # Build application with error handling
+
+21 | >>> RUN npm run build && \
+
+22 | >>>     echo "✅ Build completed" && \
+
+23 | >>>     ls -la dist/public/ && \
+
+24 | >>>     test -f "dist/public/index.html" || (echo "❌ Build failed - no index.html" && exit 1)
+
+25 |
+
+-------------------
+
+ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build &&     echo \"✅ Build completed\" &&     ls -la dist/public/ &&     test -f \"dist/public/index.html\" || (echo \"❌ Build failed - no index.html\" && exit 1)" did not complete successfully: exit code: 1

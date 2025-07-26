@@ -1,0 +1,28 @@
+{
+  "name": "Celia Dunsmore Counselling",
+  "short_name": "Celia Counselling",
+  "description": "Professional mental health counselling in Brunswick and Coburg, Melbourne",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#4EB3A5",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-AU",
+  "categories": ["health", "medical", "lifestyle"],
+  "prefer_related_applications": false
+}
