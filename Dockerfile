@@ -29,10 +29,7 @@ COPY --chown=server:nodejs . .
 
 # Build the React application for Railway
 RUN echo "🚀 Building React application for Railway..." && \
-    npm run build && \
-    echo "📁 Copying build files to production location..." && \
-    mkdir -p dist/public && \
-    cp -r client/dist/public/* dist/public/ && \
+    NODE_ENV=production npm run build && \
     echo "🔍 Verifying build..." && \
     test -f "dist/public/index.html" && echo "✅ index.html found" && \
     test -d "dist/public/assets" && echo "✅ assets directory found" && \
@@ -43,12 +40,22 @@ RUN echo "🚀 Building React application for Railway..." && \
 RUN npm ci --omit=dev --no-audit --no-fund && \
     npm cache clean --force
 
+# Remove unnecessary files to reduce image size
+RUN rm -rf \
+    client/src \
+    server/*.ts \
+    *.md \
+    archived_docs \
+    attached_assets \
+    .git \
+    node_modules/.cache
+
 # Switch to non-root user
 USER server
 
 # Railway-optimized health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=45s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT:-3000}/health || exit 1
+HEALTHCHECK --interval=30s --timeout=15s --start-period=60s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT:-5000}/health || exit 1
 
 # Railway will set the PORT environment variable
 EXPOSE $PORT

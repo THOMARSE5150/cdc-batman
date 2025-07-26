@@ -14,6 +14,7 @@ async function startServer() {
   // CRITICAL FIX: Force production mode for Railway
   const isRailwayDeployment = !!(process.env.RAILWAY_ENVIRONMENT || 
                                  process.env.RAILWAY_PUBLIC_DOMAIN ||
+                                 process.env.RAILWAY_PUBLIC_PORT ||
                                  (process.env.PORT && !process.env.REPLIT_DOMAINS));
 
   const isProduction = process.env.NODE_ENV === 'production' || isRailwayDeployment;

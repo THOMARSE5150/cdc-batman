@@ -1,108 +1,120 @@
-# Railway Deployment Configuration Guide
+# Railway Deployment Guide - Celia Dunsmore Counselling
 
-## Step 1: Get Your Railway URL
+## Quick Deployment Steps
 
-After deploying to Railway, you'll receive a URL that looks like:
-- `https://your-app-name.railway.app`
-- Or a custom domain if you've configured one
+### 1. Connect to Railway
+1. Go to [railway.app](https://railway.app)
+2. Sign in with GitHub
+3. Click "New Project" → "Deploy from GitHub repo"
+4. Select this repository
 
-## Step 2: Update Site Configuration
+### 2. Environment Variables
+Set these variables in Railway dashboard:
 
-1. **Update the main configuration file:**
-   ```typescript
-   // In client/src/lib/config.ts
-   export const siteConfig = {
-     siteUrl: 'https://your-railway-app.railway.app', // Replace with your actual URL
-     apiUrl: 'https://your-railway-app.railway.app/api',
-     // ... rest of config
-   };
-   ```
+**Required:**
+- `NODE_ENV=production`
+- `DATABASE_URL` (your PostgreSQL connection string)
 
-2. **Update environment variables in Railway:**
-   - Go to your Railway project dashboard
-   - Navigate to Variables tab
-   - Add these environment variables:
-     ```
-     PUBLIC_URL=https://your-railway-app.railway.app
-     RAILWAY_PUBLIC_DOMAIN=your-railway-app.railway.app
-     NODE_ENV=production
-     ```
+**Optional (for full functionality):**
+- `SENDGRID_API_KEY` (for contact form emails)
+- `GOOGLE_CLIENT_ID` (for calendar integration)
+- `GOOGLE_CLIENT_SECRET` (for calendar integration)
 
-## Step 3: Update Structured Data (SEO)
+### 3. Deploy
+Railway will automatically:
+- Build using the Dockerfile
+- Run health checks on `/health`
+- Start the server on the assigned port
 
-Update the URL in your index.html file:
-```html
-<!-- In client/index.html -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Celia Dunsmore Counselling",
-  "url": "https://your-railway-app.railway.app/", // Update this URL
-  // ... rest of structured data
-}
-</script>
-```
+## Deployment Configuration
 
-## Step 4: Update Google OAuth Redirect URI
+### Files Configured:
+- ✅ `Dockerfile` - Production-optimized container
+- ✅ `railway.json` - Railway-specific configuration
+- ✅ `nixpacks.toml` - Alternative build configuration
+- ✅ `.railwayignore` - Excludes unnecessary files
+- ✅ `start-server.js` - Production server with API routes
 
-1. **Go to Google Cloud Console:**
-   - Visit https://console.cloud.google.com/
-   - Navigate to APIs & Services > Credentials
-   - Find your OAuth 2.0 Client ID
+### Build Process:
+1. **Install dependencies** with dev packages for build
+2. **Build React app** to `dist/public/`
+3. **Remove dev dependencies** for smaller image
+4. **Start production server** serving static files + API
 
-2. **Update Authorized Redirect URIs:**
-   - Add: `https://your-railway-app.railway.app/api/google/oauth/callback`
-   - Remove old Replit URLs if no longer needed
+### Health Checks:
+- **Endpoint:** `/health`
+- **Timeout:** 60 seconds
+- **Checks:** Static files existence, server status
 
-## Step 5: Test Your Deployment
+### Static File Serving:
+- **Path:** `dist/public/`
+- **Caching:** 1 year for assets, no-cache for HTML
+- **SPA Routing:** All routes serve `index.html`
 
-1. **Test main pages:**
-   - Homepage: `https://your-railway-app.railway.app/`
-   - Services: `https://your-railway-app.railway.app/services`
-   - Contact: `https://your-railway-app.railway.app/contact`
+## API Endpoints Available:
 
-2. **Test API endpoints:**
-   - Health check: `https://your-railway-app.railway.app/api/health`
-   - Contact form: Submit a test contact form
+### Health & Status:
+- `GET /health` - Health check for Railway
+- `GET /api/status` - Service status
 
-3. **Test mobile responsiveness:**
-   - Open on mobile device or use browser dev tools
-   - Verify navigation works properly
+### Application APIs:
+- `POST /api/contact` - Contact form submission
+- `POST /api/bookings` - Booking requests
 
-## Step 6: Update Domain DNS (If Using Custom Domain)
+## Production Features:
 
-If you're using a custom domain like `celiadunsmorecounselling.com.au`:
+### Performance:
+- ✅ Compression enabled
+- ✅ Static file caching
+- ✅ Image optimization (WebP)
+- ✅ Code splitting and minification
 
-1. **In Railway:**
-   - Go to Settings > Domains
-   - Add your custom domain
-   - Note the CNAME/A record values provided
+### Security:
+- ✅ Non-root container user
+- ✅ CORS protection
+- ✅ Request validation with Zod
 
-2. **In your DNS provider:**
-   - Add CNAME record pointing to Railway
-   - Wait for DNS propagation (24-48 hours)
+### Monitoring:
+- ✅ Health checks every 30 seconds
+- ✅ Restart on failure (max 3 retries)
+- ✅ No application sleeping
 
-3. **Update all configurations:**
-   - Replace Railway URL with your custom domain in all config files
+## Testing Deployment:
 
-## Current Configuration Files to Update:
+### After deployment, verify:
+1. **Homepage loads:** `https://your-app.railway.app/`
+2. **Health check works:** `https://your-app.railway.app/health`
+3. **Contact form submits:** Fill out contact form
+4. **All pages accessible:** Navigate through all sections
 
-1. `client/src/lib/config.ts` - Main site configuration
-2. `client/index.html` - Structured data and meta tags
-3. `server/services/googleCalendar.ts` - OAuth redirect URI
-4. Railway environment variables
+### Expected responses:
+- **Health check:** `{"status":"OK","timestamp":"...","staticFiles":true}`
+- **Contact form:** Success message after submission
+- **All routes:** Proper React app rendering
 
-## Quick Checklist:
+## Troubleshooting:
 
-- [ ] Update siteUrl in config.ts
-- [ ] Update apiUrl in config.ts  
-- [ ] Update structured data URL in index.html
-- [ ] Add PUBLIC_URL environment variable in Railway
-- [ ] Update Google OAuth redirect URI
-- [ ] Test all main pages
-- [ ] Test contact form submission
-- [ ] Test mobile navigation
-- [ ] Verify API endpoints work
+### Build Issues:
+- Check Railway build logs for errors
+- Ensure all dependencies are in `package.json`
+- Verify build script runs locally: `npm run build`
 
-Your site will now point to Railway instead of Replit!
+### Runtime Issues:
+- Visit `/health` to check static files
+- Check Railway logs for server errors
+- Verify environment variables are set
+
+### Static Files Not Found:
+- Verify `dist/public/index.html` exists after build
+- Check file permissions in container
+- Ensure proper paths in `start-server.js`
+
+## Additional Notes:
+
+- **Domain:** Railway provides a `.railway.app` domain automatically
+- **SSL:** HTTPS enabled by default
+- **Scaling:** Auto-scaling based on traffic
+- **Logs:** Available in Railway dashboard
+- **Restart:** Manual restart available in dashboard
+
+Your professional counselling website is now ready for production deployment! 🚀

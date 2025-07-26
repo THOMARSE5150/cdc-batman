@@ -1,8 +1,14 @@
-[phases.build]
-cmds = ["npm run build && mkdir -p dist/public && cp -r client/dist/public/* dist/public/"]
+# Nixpacks configuration for Railway deployment
+[phases.setup]
+nixPkgs = ["nodejs-20_x", "python3"]
 
 [start]
 cmd = "npm start"
 
 [variables]
 NODE_ENV = "production"
+NPM_CONFIG_PRODUCTION = "false"
+
+# Cache node_modules
+[build]
+buildCommand = "npm ci --include=dev --no-audit --no-fund && npm run build"
