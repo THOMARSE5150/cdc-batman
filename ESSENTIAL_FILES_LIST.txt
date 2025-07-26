@@ -1,0 +1,46 @@
+ESSENTIAL FILES FOR GITHUB UPLOAD - Celia Dunsmore Counselling Website
+========================================================================
+
+📦 ROOT CONFIGURATION FILES:
+- package.json
+- tsconfig.json  
+- vite.config.ts
+- tailwind.config.ts
+- drizzle.config.ts
+- .gitignore
+
+🐳 DEPLOYMENT FILES:
+- Dockerfile
+- railway.json
+- server.js
+
+📁 CLIENT FOLDER (React Frontend):
+- client/src/App.tsx
+- client/src/main.tsx
+- client/index.html
+- client/src/index.css
+- client/src/pages/ (entire folder)
+- client/src/components/ (entire folder)  
+- client/src/lib/ (entire folder)
+- client/src/hooks/ (entire folder)
+- client/src/assets/ (entire folder)
+
+📁 SERVER FOLDER (Express Backend):
+- server/index.ts
+- server/routes.ts
+- server/storage.ts
+- server/email.ts
+- server/middleware/ (entire folder)
+- server/routes/ (entire folder)
+- server/services/ (entire folder)
+- server/utils/ (entire folder)
+- server/vite.ts
+
+📁 SHARED FOLDER:
+- shared/schema.ts
+
+📄 DOCUMENTATION:
+- README.md
+- replit.md
+
+TOTAL: These files make a complete, deployable website.
