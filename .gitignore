@@ -33,6 +33,7 @@ pids
 *.rar
 *_backup_*
 backup_*
+attached_assets_*
 
 # IDE and editor files
 .vscode/
